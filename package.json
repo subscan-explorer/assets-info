@@ -1,0 +1,24 @@
+{
+  "name": "@subscan/assetss-info",
+  "version": "1.0.0",
+  "description": "This package contains assets info of projects used in Subscan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/subscan-explorer/assets-info.git"
+  },
+  "keywords": [
+    "subscan",
+    "polkadot",
+    "assets"
+  ],
+  "author": "jayjay1024",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/subscan-explorer/assets-info/issues"
+  },
+  "homepage": "https://github.com/subscan-explorer/assets-info#readme"
+}
