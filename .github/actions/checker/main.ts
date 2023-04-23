@@ -176,11 +176,11 @@ const main = async () => {
     return;
   }
 
-  const githubToken = actions.getInput("githubToken");
-  const prSha = actions.getInput("prSha");
-  const prNum = actions.getInput("prNum");
+  const githubToken = actions.getInput("githubToken", { required: true });
+  const prSha = actions.getInput("prSha", { required: true });
+  const prNum = actions.getInput("prNum", { required: true });
 
-  console.log('fileNames', actions.getInput("fileNames"));
+  console.log('fileNames', actions.getInput("fileNames", { required: true }));
   console.log('changes', changes);
   console.log('prSha', prSha);
   console.log('prNum', prNum);
