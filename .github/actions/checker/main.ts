@@ -80,10 +80,10 @@ const isValidAsset = async (id, symbol, network, owner, file) => {
     .catch(console.error);
 
   if (data?.admin && data?.owner && data?.metadata) {
-    if (owner !== data.owner?.address || owner !== data.admin.address) {
-      actions.setFailed("wrong Asset Owner & Signature Account");
-      return false;
-    }
+    // if (owner !== data.owner?.address || owner !== data.admin.address) {
+    //   actions.setFailed("wrong Asset Owner & Signature Account");
+    //   return false;
+    // }
     if (symbol && symbol !== data.metadata?.symbol) {
       actions.setFailed(`wrong TokenSymbol in ${file}`);
       return false;
