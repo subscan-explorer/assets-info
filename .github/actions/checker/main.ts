@@ -180,6 +180,9 @@ const main = async () => {
   const prSha = actions.getInput("prSha");
   const prNum = actions.getInput("prNum");
 
+  console.log(githubToken ? githubToken.slice(0, 3) : 'token not found');
+  console.log(process.env.APIKEY ? process.env.APIKEY.slice(0, 3) : 'api key not found');
+
   const prContent = prNum
     ? await getPRContentByNumber(githubToken, prNum)
     : await getPRContentBySha(githubToken, prSha);
