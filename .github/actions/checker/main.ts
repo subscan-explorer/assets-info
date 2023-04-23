@@ -120,7 +120,9 @@ const isValidSystemCustom = async (symbol, category, network, file) => {
     .catch(console.error);
 
   if (tokens?.length) {
-    if (tokens.some((token) => token.symbol === symbol)) {
+    const found = tokens.filter((token) => token.symbol === symbol);
+    actions.warning(`found ${found.length} ${symbol}`);
+    if (found.length) {
       return true;
     }
 
