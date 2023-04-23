@@ -227,12 +227,12 @@ const main = async () => {
 
     if (category === "asset") {
       if (!owner || !signature) {
-        actions.setFailed("Get owner or signature failed");
+        actions.setFailed("get owner or signature failed");
         verified = false;
         continue;
       }
 
-      verified = await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file);
+      verified = !verified || await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file);
 
       const secondBody = body.replace(/\n/g, " ");
       const thirdBody = secondBody.trim();
@@ -241,9 +241,9 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = await isValidSystemCustom(tokenSymbol, category, networkIdentity, file);
+      verified = !verified || await isValidSystemCustom(tokenSymbol, category, networkIdentity, file);
     } else if (category === 'erc20' || category === 'erc721') {
-      verified = await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file);
+      verified = !verified || await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file);
     }
 
     if (!verified) {
