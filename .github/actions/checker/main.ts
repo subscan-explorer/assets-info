@@ -202,6 +202,7 @@ const main = async () => {
   console.log("extracted", owner, signature);
 
   let verified = true;
+  console.log('changes', changes);
 
   await cryptoWaitReady();
   for (const file of changes) {
@@ -210,6 +211,9 @@ const main = async () => {
     }
 
     const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
+    const p = __dirname + "/../../../" + file;
+    console.log('path', p);
+    console.log('body', body);
     if (body.length === 0) {
       continue;
     }
