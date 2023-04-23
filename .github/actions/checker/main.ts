@@ -183,7 +183,7 @@ const main = async () => {
   const prContent = prNum
     ? await getPRContentByNumber(process.env.INPUT_TOKEN, prNum)
     : await getPRContentBySha(process.env.INPUT_TOKEN, prSha);
-  console.log("pr", `#${prNum}`, prSha, prContent);
+  console.log("pr", `#${prNum}`, prSha);
 
   if (!prContent) {
     actions.setFailed("get PR content failed");
