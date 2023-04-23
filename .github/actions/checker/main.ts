@@ -10,7 +10,7 @@ const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
 const headers = {
   "Content-Type": "application/json",
-  "X-Api-Key": process.env.APIKEY,
+  "X-Api-Key": process.env.INPUT_APIKEY,
 };
 
 const getPRContentBySha = async (token: string, sha: string) => {
@@ -170,7 +170,7 @@ const assetRegex =
 const othersRegex = /Your Identity:[\n\s]+`(?:Team Member|Community Member|Other)`/;
 
 const main = async () => {
-  const changes: string[] = actions.getInput("fileNames").split(" ");
+  const changes: string[] = process.env.INPUT_CHANGED_FILES.split(" ");
   if (changes.length === 0) {
     console.log("changes not found");
     return;

@@ -29,11 +29,11 @@ jobs:
         if: success()
         id: signature
         with:
-          prSha: ${{ github.event.pull_request.head.sha }}
-          prNum: ${{ github.event.pull_request.number }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          fileNames: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
-          subscanApiKey: ${{ secrets.SUBSCAN_APIKEY }}
+          pr_sha: ${{ github.event.pull_request.head.sha }}
+          pr_num: ${{ github.event.pull_request.number }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          changed_files: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
+          subscan_apikey: ${{ secrets.SUBSCAN_APIKEY }}
       - uses: actions-ecosystem/action-remove-labels@v1
         if: always()
         with:
