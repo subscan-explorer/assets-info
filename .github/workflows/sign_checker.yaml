@@ -23,6 +23,8 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
+        with:
+          fetch_depth: 60
 
       - name: Check signature
         uses: ./.github/actions/checker
