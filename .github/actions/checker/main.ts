@@ -4,6 +4,7 @@ const actions = require("@actions/core");
 const { cryptoWaitReady, decodeAddress, signatureVerify } = require("@polkadot/util-crypto");
 const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
+const path = require('path');
 const fs = require("fs");
 
 const categories: string[] = require("../../../categories.json");
@@ -204,15 +205,30 @@ const main = async () => {
   let verified = true;
   console.log('changes', changes);
 
+  const directoryPath = path.join(__dirname, '/../../../assets');
+  console.log('directoryPath', directoryPath);
+  fs.readdir(directoryPath, function (err, files) {
+    //handling error
+    if (err) {
+        return console.log('Unable to scan directory: ' + err);
+    } 
+    //listing all files using forEach
+    files.forEach(function (file) {
+        // Do whatever you want to do with the file
+        console.log(file); 
+    });
+});
+
   await cryptoWaitReady();
   for (const file of changes) {
     if (!file.startsWith("assets/") || !file.endsWith(".json")) {
       continue;
     }
 
-    const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
     const p = __dirname + "/../../../" + file;
     console.log('path', p);
+
+    const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
     console.log('body', body);
     if (body.length === 0) {
       continue;
