@@ -1,4 +1,4 @@
 ## Verification
 
 Your Identity:
-`<Team Member / Community Member / Other>`
+`<Team Member | Community Member | Other>`
