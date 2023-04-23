@@ -1,8 +1,12 @@
 const assetsContext = require.context("./assets", false, /\.json$/);
+const networks = require("./networks.json");
 const projectAssetsInfo = {};
 
 assetsContext.keys().forEach((k) => {
   const c = assetsContext(k);
+  if (!networks.includes(c.NetworkIdentity)) {
+    return;
+  }
 
   const source = c.NetworkIdentity;
   const category = c.Category;
