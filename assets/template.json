@@ -1,5 +1,5 @@
 {
-  "TokenID": 1234,
+  "TokenID": "<ID or Contract Address>",
   "TokenSymbol": "",
   "Logo": "../logos/[logo file name]",
   "Description (en)": "",
