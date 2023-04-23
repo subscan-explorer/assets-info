@@ -9,7 +9,8 @@ const fs = require("fs");
 const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
 const headers = {
-  "Content-Type": "application/json",
+  "Content-Type": "application/json; charset=utf-8",
+  "Content-Length": 456,
   "X-Api-Key": process.env.INPUT_APIKEY,
 };
 
@@ -144,7 +145,7 @@ const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
     body,
   })
     .then((res) => {
-      console.log('res', res)
+      console.log('res', JSON.stringify(res));
       return res;
     })
     .then((resp) => resp.json())
