@@ -81,7 +81,7 @@ const isValidAsset = async (id, symbol, network, owner, file) => {
 
   if (data?.admin && data?.owner && data?.metadata) {
     if (owner !== data.owner?.address || owner !== data.admin.address) {
-      actions.setFailed(`wrong Asset Owner & Signature Account in ${file}`);
+      actions.setFailed("wrong Asset Owner & Signature Account");
       return false;
     }
     if (symbol && symbol !== data.metadata?.symbol) {
@@ -120,7 +120,11 @@ const isValidSystemCustom = async (symbol, category, network, file) => {
     .catch(console.error);
 
   if (tokens?.length) {
-    if (tokens.some((token) => token.symbol === symbol)) {
+    const found = tokens.filter((token) => token.symbol === symbol);
+    if (found.length) {
+      if (found.length > 1) {
+        actions.warning(`found ${found.length} ${symbol} tokens`);
+      }
       return true;
     }
 
