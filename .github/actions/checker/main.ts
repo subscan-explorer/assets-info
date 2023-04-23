@@ -10,7 +10,6 @@ const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
 const headers = {
   "Content-Type": "application/json; charset=utf-8",
-  "Content-Length": 456,
   "X-Api-Key": process.env.INPUT_APIKEY,
 };
 
