@@ -20,6 +20,8 @@ jobs:
         with:
           labels: Waiting Signature Verifier
       - uses: actions/checkout@v3
+        with:
+          ref: {{ github.head_ref }}
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
