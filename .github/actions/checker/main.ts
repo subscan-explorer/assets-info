@@ -4,7 +4,6 @@ const actions = require("@actions/core");
 const { cryptoWaitReady, decodeAddress, signatureVerify } = require("@polkadot/util-crypto");
 const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
-const path = require('path');
 const fs = require("fs");
 
 const categories: string[] = require("../../../categories.json");
@@ -61,7 +60,7 @@ const tryIsValidSignatures = (signedMessages, signature, address) => {
   return false;
 };
 
-const isValidAsset = async (id, symbol, network, owner) => {
+const isValidAsset = async (id, symbol, network, owner, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/scan/assets/asset`;
   const body = { asset_id: id.toString() };
 
@@ -82,11 +81,11 @@ const isValidAsset = async (id, symbol, network, owner) => {
 
   if (data?.admin && data?.owner && data?.metadata) {
     if (owner !== data.owner?.address || owner !== data.admin.address) {
-      actions.setFailed("wrong Asset Owner & Signature Account");
+      actions.setFailed(`wrong Asset Owner & Signature Account in ${file}`);
       return false;
     }
     if (symbol && symbol !== data.metadata?.symbol) {
-      actions.setFailed("wrong TokenSymbol");
+      actions.setFailed(`wrong TokenSymbol in ${file}`);
       return false;
     }
     return true;
@@ -96,7 +95,7 @@ const isValidAsset = async (id, symbol, network, owner) => {
   return false;
 };
 
-const isValidSystemCustom = async (symbol, category, network) => {
+const isValidSystemCustom = async (symbol, category, network, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/v2/scan/tokens`;
   const body = {
     include_extends: true,
@@ -125,7 +124,7 @@ const isValidSystemCustom = async (symbol, category, network) => {
       return true;
     }
 
-    actions.setFailed("TokenSymbol is invalid");
+    actions.setFailed(`TokenSymbol is invalid in ${file}`);
     return false;
   }
 
@@ -133,7 +132,7 @@ const isValidSystemCustom = async (symbol, category, network) => {
   return false;
 };
 
-const isValidERC20ERC721 = async (id, symbol, category, network) => {
+const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/scan/evm/tokens`;
   const body = {
     contracts: [id.toString()],
@@ -156,7 +155,7 @@ const isValidERC20ERC721 = async (id, symbol, category, network) => {
 
   if (list?.length) {
     if (symbol && symbol !== list[0].symbol) {
-      actions.setFailed("wrong TokenSymbol");
+      actions.setFailed(`wrong TokenSymbol in ${file}`);
       return false;
     }
     return true;
@@ -203,19 +202,6 @@ const main = async () => {
   console.log("extracted", owner, signature);
 
   let verified = true;
-  console.log('changes', changes);
-
-  const directoryPath = path.join(__dirname, '/../../../assets');
-  console.log('directoryPath', directoryPath);
-  const dir = fs.opendirSync(directoryPath);
-  for await (const entry of dir) {
-    console.log("Found file:", entry.name);
-  }
-
-  const template: string = fs.readFileSync(__dirname + "/../../../" + "assets/template.json", "utf8").toString();
-  console.log('template', template);
-  const erc20file: string = fs.readFileSync(__dirname + "/../../../" + "assets/crab-erc20-xRING.json", "utf8").toString();
-  console.log('erc20file', erc20file);
 
   await cryptoWaitReady();
   for (const file of changes) {
@@ -223,11 +209,7 @@ const main = async () => {
       continue;
     }
 
-    const p = __dirname + "/../../../" + file;
-    console.log('path', p);
-
     const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
-    console.log('body', body);
     if (body.length === 0) {
       continue;
     }
@@ -235,11 +217,11 @@ const main = async () => {
     const { TokenID: tokenId, TokenSymbol: tokenSymbol, Category: category, NetworkIdentity: networkIdentity } = detail;
 
     if (!networks.includes(networkIdentity)) {
-      actions.setFailed("NetworkIdentity is invalid");
+      actions.setFailed(`NetworkIdentity is invalid in ${file}`);
       verified = false;
     }
     if (!categories.includes(category)) {
-      actions.setFailed("Category is invalid");
+      actions.setFailed(`Category is invalid in ${file}`);
       verified = false;
     }
 
@@ -250,7 +232,7 @@ const main = async () => {
         continue;
       }
 
-      verified = await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner);
+      verified = await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file);
 
       const secondBody = body.replace(/\n/g, " ");
       const thirdBody = secondBody.trim();
@@ -259,12 +241,14 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = await isValidSystemCustom(tokenSymbol, category, networkIdentity);
+      verified = await isValidSystemCustom(tokenSymbol, category, networkIdentity, file);
     } else if (category === 'erc20' || category === 'erc721') {
-      verified = await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity);
+      verified = await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file);
     }
 
-    break;
+    if (!verified) {
+      break;
+    }
   }
 
   actions.setOutput("verified", verified ? "true" : "false");
