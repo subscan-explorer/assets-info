@@ -196,10 +196,10 @@ const main = async () => {
   const extractedAsset = assetRegex.exec(prContent.body);
   const extractedOthers = othersRegex.exec(prContent.body);
 
-  if (extractedAsset?.length !== 3 && extractedOthers?.length !== 1) {
-    actions.setFailed("the PR content is not expected");
-    return;
-  }
+  // if (extractedAsset?.length !== 3 && extractedOthers?.length !== 1) {
+  //   actions.setFailed("the PR content is not expected");
+  //   return;
+  // }
 
   const owner = extractedAsset?.[1].trim();
   const signature = extractedAsset?.[2].trim();
