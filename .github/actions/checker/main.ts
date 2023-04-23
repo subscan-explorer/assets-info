@@ -260,7 +260,7 @@ const main = async () => {
       }
     } else if (category === "system" || category === "custom") {
       verified = await isValidSystemCustom(tokenSymbol, category, networkIdentity);
-    } else {
+    } else if (category === 'erc20' || category === 'erc721') {
       verified = await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity);
     }
 
