@@ -1,19 +1,19 @@
 name: "sign checker"
 description: "check sign"
 inputs:
-  prSha:
+  pr_sha:
     required: true
     description: PR SHA
-  prNum:
+  pr_num:
     required: true
     description: PR Number
-  githubToken:
+  github_token:
     required: true
     description: Github Token
-  fileNames:
+  changed_files:
     required: true
     description: Changed Filenames
-  subscanApiKey:
+  subscan_apikey:
     required: true
     description: Subscan API Key for verify owner
 outputs:
@@ -44,8 +44,8 @@ runs:
       shell: bash
       id: executor
       env:
-        INPUT_SHA: ${{ inputs.prSha }}
-        INPUT_NUM: ${{ inputs.prNum }}
-        INPUT_TOKEN: ${{ inputs.githubToken }}
-        INPUT_FILENAMES: ${{ inputs.fileNames }}
-        APIKEY: ${{ inputs.subscanApiKey }}
+        INPUT_SHA: ${{ inputs.pr_sha }}
+        INPUT_NUM: ${{ inputs.pr_num }}
+        INPUT_TOKEN: ${{ inputs.github_token }}
+        INPUT_CHANGED_FILES: ${{ inputs.changed_files }}
+        INPUT_APIKEY: ${{ inputs.subscan_apikey }}
