@@ -40,6 +40,12 @@ runs:
           yarn && yarn build
         fi;
       shell: bash
+    - name: Extract branch name
+      run: |
+        echo ${{ github.ref }}
+        echo ${{ github.base_ref }}
+        echo ${{ github.head_ref }}
+      shell: bash
     - run: node ${{ github.action_path }}/main.js
       shell: bash
       id: executor
