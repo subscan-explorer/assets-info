@@ -180,7 +180,16 @@ const main = async () => {
   const prSha = actions.getInput("prSha");
   const prNum = actions.getInput("prNum");
 
-  console.log(githubToken ? githubToken.slice(0, 3) : 'token not found', prNum. prSha);
+  console.log('fileNames', actions.getInput("fileNames"));
+  console.log('changes', changes);
+  console.log('prSha', prSha);
+  console.log('prNum', prNum);
+
+  console.log('fileNames env', process.env.INPUT_FILENAMES);
+  console.log('prSha env', process.env.INPUT_SHA);
+  console.log('prNum env', process.env.INPUT_NUM);
+
+  console.log(githubToken ? githubToken.slice(0, 3) : 'token not found');
   console.log(process.env.APIKEY ? process.env.APIKEY.slice(0, 3) : 'api key not found');
   console.log(process.env.INPUT_TOKEN ? process.env.INPUT_TOKEN.slice(0, 3) : ' token env not found');
 
