@@ -62,7 +62,7 @@ const tryIsValidSignatures = (signedMessages, signature, address) => {
 
 const isValidAsset = async (id, symbol, network, owner, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/scan/assets/asset`;
-  const body = { asset_id: id.toString() };
+  const body = JSON.stringify({ asset_id: id.toString() });
 
   const data = await nodeFetch(apiUrl, {
     method: "post",
@@ -97,12 +97,12 @@ const isValidAsset = async (id, symbol, network, owner, file) => {
 
 const isValidSystemCustom = async (symbol, category, network, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/v2/scan/tokens`;
-  const body = {
+  const body = JSON.stringify({
     include_extends: true,
     page: 0,
     provider: category === "system" ? "system" : "asset_registry",
     row: 100,
-  };
+  });
 
   const tokens = await nodeFetch(apiUrl, {
     method: "post",
@@ -134,9 +134,9 @@ const isValidSystemCustom = async (symbol, category, network, file) => {
 
 const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
   const apiUrl = `https://${network}.webapi.subscan.io/api/scan/evm/tokens`;
-  const body = {
+  const body = JSON.stringify({
     contracts: [id.toString()],
-  };
+  });
 
   const list = await nodeFetch(apiUrl, {
     method: "post",
@@ -232,7 +232,7 @@ const main = async () => {
         continue;
       }
 
-      verified = !verified || await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file);
+      verified = !verified || (await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file));
 
       const secondBody = body.replace(/\n/g, " ");
       const thirdBody = secondBody.trim();
@@ -241,9 +241,9 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = !verified || await isValidSystemCustom(tokenSymbol, category, networkIdentity, file);
-    } else if (category === 'erc20' || category === 'erc721') {
-      verified = !verified || await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file);
+      verified = !verified || (await isValidSystemCustom(tokenSymbol, category, networkIdentity, file));
+    } else if (category === "erc20" || category === "erc721") {
+      verified = !verified || (await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file));
     }
 
     if (!verified) {
