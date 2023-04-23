@@ -5,7 +5,8 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "@polkadot/api": "^10.3.4"
+    "@polkadot/api": "^10.3.4",
+    "node-fetch": "v2"
   },
   "devDependencies": {
     "typescript": "^5.0.4"

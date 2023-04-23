@@ -3,7 +3,7 @@ const actions = require("@actions/core");
 
 const { cryptoWaitReady, decodeAddress, signatureVerify } = require("@polkadot/util-crypto");
 const { u8aToHex } = require("@polkadot/util");
-const nodeFetch = require("node-fetch@v2");
+const nodeFetch = require("node-fetch");
 const fs = require("fs");
 
 const categories: string[] = require("../../../categories.json");
