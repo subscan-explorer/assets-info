@@ -61,7 +61,7 @@ const tryIsValidSignatures = (signedMessages, signature, address) => {
 };
 
 const isValidAsset = async (id, symbol, network, owner, file) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/scan/assets/asset`;
+  const apiUrl = `https://${network}.api.subscan.io/api/scan/assets/asset`;
   const body = JSON.stringify({ asset_id: id.toString() });
 
   const data = await nodeFetch(apiUrl, {
@@ -96,7 +96,7 @@ const isValidAsset = async (id, symbol, network, owner, file) => {
 };
 
 const isValidSystemCustom = async (symbol, category, network, file) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/v2/scan/tokens`;
+  const apiUrl = `https://${network}.api.subscan.io/api/v2/scan/tokens`;
   const body = JSON.stringify({
     include_extends: true,
     page: 0,
@@ -133,7 +133,7 @@ const isValidSystemCustom = async (symbol, category, network, file) => {
 };
 
 const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/scan/evm/tokens`;
+  const apiUrl = `https://${network}.api.subscan.io/api/scan/evm/tokens`;
   const body = JSON.stringify({
     contracts: [id.toString()],
   });
