@@ -1,7 +1,7 @@
 {
   "TokenID": 1234,
   "TokenSymbol": "",
-  "Logo": "../assets/images/[logo file name]",
+  "Logo": "../logos/[logo file name]",
   "Description (en)": "",
   "Description (zh)": "",
   "Website Link": "<LEAVE HERE A LINK OR EMPTY>",
