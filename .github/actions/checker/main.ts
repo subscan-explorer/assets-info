@@ -212,8 +212,8 @@ const main = async () => {
     console.log("Found file:", entry.name);
   }
 
-  const template: string = fs.readFileSync(__dirname + "/../../../" + "assets/template.json", "utf8").toString();
-  console.log('template', template);
+  const template: string = fs.readFileSync(__dirname + "/../../../" + "assets/template2.json", "utf8").toString();
+  console.log('template2', template);
   const erc20file: string = fs.readFileSync(__dirname + "/../../../" + "assets/crab-erc20-xRING.json", "utf8").toString();
   console.log('erc20file', erc20file);
 
