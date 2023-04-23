@@ -143,6 +143,10 @@ const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
     headers,
     body,
   })
+    .then((res) => {
+      console.log('res', res)
+      return res;
+    })
     .then((resp) => resp.json())
     .then((data) => {
       if (data?.code === 0) {
