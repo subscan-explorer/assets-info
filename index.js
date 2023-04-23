@@ -7,8 +7,8 @@ assetsContext.keys().forEach((k) => {
   const source = c.NetworkIdentity;
   const category = c.Category;
 
-  projectAssetsInfo[source] = projectAssetsInfo?.[source] || {};
-  projectAssetsInfo[source][category] = projectAssetsInfo[source]?.[category] || [];
+  projectAssetsInfo[source] = projectAssetsInfo[source] || {};
+  projectAssetsInfo[source][category] = projectAssetsInfo[source][category] || [];
 
   try {
     const logoPaths = c.Logo.split("/");
