@@ -4,6 +4,7 @@ const actions = require("@actions/core");
 const { cryptoWaitReady, decodeAddress, signatureVerify } = require("@polkadot/util-crypto");
 const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
+const path = require('path');
 const fs = require("fs");
 
 const categories: string[] = require("../../../categories.json");
@@ -204,15 +205,28 @@ const main = async () => {
   let verified = true;
   console.log('changes', changes);
 
+  const directoryPath = path.join(__dirname, '/../../../assets');
+  console.log('directoryPath', directoryPath);
+  const dir = fs.opendirSync(directoryPath);
+  for await (const entry of dir) {
+    console.log("Found file:", entry.name);
+  }
+
+  const template: string = fs.readFileSync(__dirname + "/../../../" + "assets/template.json", "utf8").toString();
+  console.log('template', template);
+  const erc20file: string = fs.readFileSync(__dirname + "/../../../" + "assets/crab-erc20-xRING.json", "utf8").toString();
+  console.log('erc20file', erc20file);
+
   await cryptoWaitReady();
   for (const file of changes) {
     if (!file.startsWith("assets/") || !file.endsWith(".json")) {
       continue;
     }
 
-    const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
     const p = __dirname + "/../../../" + file;
     console.log('path', p);
+
+    const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
     console.log('body', body);
     if (body.length === 0) {
       continue;
