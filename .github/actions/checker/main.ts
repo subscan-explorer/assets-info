@@ -6,8 +6,8 @@ const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
 const fs = require("fs");
 
+const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
-const categories = ["asset", "system", "custom", "erc20", "erc721"];
 const headers = {
   "Content-Type": "application/json",
   "X-Api-Key": process.env.APIKEY,
@@ -172,7 +172,7 @@ const othersRegex = /Your Identity:[\n\s]+`(?:Team Member|Community Member|Other
 const main = async () => {
   const changes: string[] = actions.getInput("fileNames").split(" ");
   if (changes.length === 0) {
-    console.log('changes not found');
+    console.log("changes not found");
     return;
   }
 
