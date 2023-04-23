@@ -212,6 +212,11 @@ const main = async () => {
     console.log("Found file:", entry.name);
   }
 
+  const template: string = fs.readFileSync(__dirname + "/../../../" + "template.json", "utf8").toString();
+  console.log('template', template);
+  const erc20file: string = fs.readFileSync(__dirname + "/../../../" + "assets/crab-erc20-xRING.json", "utf8").toString();
+  console.log('erc20file', erc20file);
+
   await cryptoWaitReady();
   for (const file of changes) {
     if (!file.startsWith("assets/") || !file.endsWith(".json")) {
