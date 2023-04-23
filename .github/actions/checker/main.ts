@@ -6,11 +6,11 @@ const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
 const fs = require("fs");
 
+const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
-const categories = ["asset", "system", "custom", "erc20", "erc721"];
 const headers = {
   "Content-Type": "application/json",
-  "X-Api-Key": process.env.APIKEY,
+  "X-Api-Key": process.env.INPUT_APIKEY,
 };
 
 const getPRContentBySha = async (token: string, sha: string) => {
@@ -60,9 +60,9 @@ const tryIsValidSignatures = (signedMessages, signature, address) => {
   return false;
 };
 
-const isValidAsset = async (id, symbol, network, owner) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/scan/assets/asset`;
-  const body = { asset_id: id.toString() };
+const isValidAsset = async (id, symbol, network, owner, file) => {
+  const apiUrl = `https://${network}.api.subscan.io/api/scan/assets/asset`;
+  const body = JSON.stringify({ asset_id: id.toString() });
 
   const data = await nodeFetch(apiUrl, {
     method: "post",
@@ -81,11 +81,11 @@ const isValidAsset = async (id, symbol, network, owner) => {
 
   if (data?.admin && data?.owner && data?.metadata) {
     if (owner !== data.owner?.address || owner !== data.admin.address) {
-      actions.setFailed("wrong Asset Owner & Signature Account");
+      actions.setFailed(`wrong Asset Owner & Signature Account in ${file}`);
       return false;
     }
     if (symbol && symbol !== data.metadata?.symbol) {
-      actions.setFailed("wrong TokenSymbol");
+      actions.setFailed(`wrong TokenSymbol in ${file}`);
       return false;
     }
     return true;
@@ -95,14 +95,14 @@ const isValidAsset = async (id, symbol, network, owner) => {
   return false;
 };
 
-const isValidSystemCustom = async (symbol, category, network) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/v2/scan/tokens`;
-  const body = {
+const isValidSystemCustom = async (symbol, category, network, file) => {
+  const apiUrl = `https://${network}.api.subscan.io/api/v2/scan/tokens`;
+  const body = JSON.stringify({
     include_extends: true,
     page: 0,
     provider: category === "system" ? "system" : "asset_registry",
     row: 100,
-  };
+  });
 
   const tokens = await nodeFetch(apiUrl, {
     method: "post",
@@ -120,11 +120,15 @@ const isValidSystemCustom = async (symbol, category, network) => {
     .catch(console.error);
 
   if (tokens?.length) {
-    if (tokens.some((token) => token.symbol === symbol)) {
+    const found = tokens.filter((token) => token.symbol === symbol);
+    if (found.length) {
+      if (found.length > 1) {
+        actions.warning(`found ${found.length} ${symbol} tokens`);
+      }
       return true;
     }
 
-    actions.setFailed("TokenSymbol is invalid");
+    actions.setFailed(`TokenSymbol is invalid in ${file}`);
     return false;
   }
 
@@ -132,11 +136,11 @@ const isValidSystemCustom = async (symbol, category, network) => {
   return false;
 };
 
-const isValidERC20ERC721 = async (id, symbol, category, network) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/scan/evm/tokens`;
-  const body = {
+const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
+  const apiUrl = `https://${network}.api.subscan.io/api/scan/evm/tokens`;
+  const body = JSON.stringify({
     contracts: [id.toString()],
-  };
+  });
 
   const list = await nodeFetch(apiUrl, {
     method: "post",
@@ -155,7 +159,7 @@ const isValidERC20ERC721 = async (id, symbol, category, network) => {
 
   if (list?.length) {
     if (symbol && symbol !== list[0].symbol) {
-      actions.setFailed("wrong TokenSymbol");
+      actions.setFailed(`wrong TokenSymbol in ${file}`);
       return false;
     }
     return true;
@@ -170,20 +174,19 @@ const assetRegex =
 const othersRegex = /Your Identity:[\n\s]+`(?:Team Member|Community Member|Other)`/;
 
 const main = async () => {
-  const changes: string[] = actions.getInput("fileNames").split(" ");
+  const changes: string[] = process.env.INPUT_CHANGED_FILES.split(" ");
   if (changes.length === 0) {
-    console.log('changes not found');
+    console.log("changes not found");
     return;
   }
 
-  const githubToken = actions.getInput("githubToken");
-  const prSha = actions.getInput("prSha");
-  const prNum = actions.getInput("prNum");
+  const prSha = process.env.INPUT_SHA;
+  const prNum = process.env.INPUT_NUM ? Number(process.env.INPUT_NUM) : 0;
 
   const prContent = prNum
-    ? await getPRContentByNumber(githubToken, prNum)
-    : await getPRContentBySha(githubToken, prSha);
-  console.log("pr", `#${prNum}`, prSha, prContent);
+    ? await getPRContentByNumber(process.env.INPUT_TOKEN, prNum)
+    : await getPRContentBySha(process.env.INPUT_TOKEN, prSha);
+  console.log("pr", `#${prNum}`, prSha);
 
   if (!prContent) {
     actions.setFailed("get PR content failed");
@@ -193,7 +196,7 @@ const main = async () => {
   const extractedAsset = assetRegex.exec(prContent.body);
   const extractedOthers = othersRegex.exec(prContent.body);
 
-  if (extractedAsset?.length !== 3 || extractedOthers?.length !== 1) {
+  if (extractedAsset?.length !== 3 && extractedOthers?.length !== 1) {
     actions.setFailed("the PR content is not expected");
     return;
   }
@@ -218,22 +221,22 @@ const main = async () => {
     const { TokenID: tokenId, TokenSymbol: tokenSymbol, Category: category, NetworkIdentity: networkIdentity } = detail;
 
     if (!networks.includes(networkIdentity)) {
-      actions.setFailed("NetworkIdentity is invalid");
+      actions.setFailed(`NetworkIdentity is invalid in ${file}`);
       verified = false;
     }
     if (!categories.includes(category)) {
-      actions.setFailed("Category is invalid");
+      actions.setFailed(`Category is invalid in ${file}`);
       verified = false;
     }
 
     if (category === "asset") {
       if (!owner || !signature) {
-        actions.setFailed("Get owner or signature failed");
+        actions.setFailed("get owner or signature failed");
         verified = false;
         continue;
       }
 
-      verified = await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner);
+      verified = !verified || (await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file));
 
       const secondBody = body.replace(/\n/g, " ");
       const thirdBody = secondBody.trim();
@@ -242,12 +245,14 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = await isValidSystemCustom(tokenSymbol, category, networkIdentity);
-    } else {
-      verified = await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity);
+      verified = !verified || (await isValidSystemCustom(tokenSymbol, category, networkIdentity, file));
+    } else if (category === "erc20" || category === "erc721") {
+      verified = !verified || (await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file));
     }
 
-    break;
+    if (!verified) {
+      break;
+    }
   }
 
   actions.setOutput("verified", verified ? "true" : "false");

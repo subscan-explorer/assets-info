@@ -19,21 +19,26 @@ jobs:
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: Waiting Signature Verifier
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.head_ref }}
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v18.4
+        uses: tj-actions/changed-files@v35
+        with:
+          base_sha: ${{ github.event.pull_request.base.sha }}
+          sha: ${{ github.event.pull_request.head.sha }}
 
       - name: Check signature
         uses: ./.github/actions/checker
         if: success()
         id: signature
         with:
-          prSha: ${{ github.event.pull_request.head.sha }}
-          prNum: ${{ github.event.pull_request.number }}
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          fileNames: ${{ steps.changed-files.outputs.all_changed_files }}
-          subscanApiKey: ${{ secrets.SUBSCAN_APIKEY }}
+          pr_sha: ${{ github.event.pull_request.head.sha }}
+          pr_num: ${{ github.event.pull_request.number }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          changed_files: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
+          subscan_apikey: ${{ secrets.SUBSCAN_APIKEY }}
       - uses: actions-ecosystem/action-remove-labels@v1
         if: always()
         with:
