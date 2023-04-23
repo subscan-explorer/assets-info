@@ -6,8 +6,8 @@ const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
 const fs = require("fs");
 
+const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
-const categories = ["asset", "system", "custom", "erc20", "erc721"];
 const headers = {
   "Content-Type": "application/json",
   "X-Api-Key": process.env.APIKEY,
@@ -172,17 +172,16 @@ const othersRegex = /Your Identity:[\n\s]+`(?:Team Member|Community Member|Other
 const main = async () => {
   const changes: string[] = actions.getInput("fileNames").split(" ");
   if (changes.length === 0) {
-    console.log('changes not found');
+    console.log("changes not found");
     return;
   }
 
-  const githubToken = actions.getInput("githubToken");
-  const prSha = actions.getInput("prSha");
-  const prNum = actions.getInput("prNum");
+  const prSha = process.env.INPUT_SHA;
+  const prNum = process.env.INPUT_NUM ? Number(process.env.INPUT_NUM) : 0;
 
   const prContent = prNum
-    ? await getPRContentByNumber(githubToken, prNum)
-    : await getPRContentBySha(githubToken, prSha);
+    ? await getPRContentByNumber(process.env.INPUT_TOKEN, prNum)
+    : await getPRContentBySha(process.env.INPUT_TOKEN, prSha);
   console.log("pr", `#${prNum}`, prSha, prContent);
 
   if (!prContent) {
@@ -193,7 +192,7 @@ const main = async () => {
   const extractedAsset = assetRegex.exec(prContent.body);
   const extractedOthers = othersRegex.exec(prContent.body);
 
-  if (extractedAsset?.length !== 3 || extractedOthers?.length !== 1) {
+  if (extractedAsset?.length !== 3 && extractedOthers?.length !== 1) {
     actions.setFailed("the PR content is not expected");
     return;
   }
@@ -203,6 +202,7 @@ const main = async () => {
   console.log("extracted", owner, signature);
 
   let verified = true;
+  console.log('changes', changes);
 
   await cryptoWaitReady();
   for (const file of changes) {
@@ -211,6 +211,9 @@ const main = async () => {
     }
 
     const body: string = fs.readFileSync(__dirname + "/../../../" + file, "utf8").toString();
+    const p = __dirname + "/../../../" + file;
+    console.log('path', p);
+    console.log('body', body);
     if (body.length === 0) {
       continue;
     }

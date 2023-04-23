@@ -1,28 +1,22 @@
-const categories = ["asset", "system", "cutom", "erc20", "erc721"];
-
-const networksContext = require.context("./networks", false, /\.json$/);
+const assetsContext = require.context("./assets", false, /\.json$/);
 const projectAssetsInfo = {};
 
-networksContext.keys().forEach((k) => {
-  const c = networksContext(k);
-  const source = k.split(".json")[0];
-  projectAssetsInfo[source] = {};
+assetsContext.keys().forEach((k) => {
+  const c = assetsContext(k);
 
-  for (const category of categories) {
-    projectAssetsInfo[source][category] = [];
+  const source = c.NetworkIdentity;
+  const category = c.Category;
 
-    const assets = c?.[category] || [];
-    for (const asset of assets) {
-      if (asset.TokenID) {
-        try {
-          const logoPaths = asset.Logo.split("/");
-          const imageName = logoPaths[logoPaths.length - 1];
-          asset.logo = require(`./assets/images/${imageName}`);
-        } catch {}
-        projectAssetsInfo[source][category].push(asset);
-      }
-    }
-  }
+  projectAssetsInfo[source] = projectAssetsInfo?.[source] || {};
+  projectAssetsInfo[source][category] = projectAssetsInfo[source]?.[category] || [];
+
+  try {
+    const logoPaths = c.Logo.split("/");
+    const imageName = logoPaths[logoPaths.length - 1];
+    c.Logo = require(`./logos/${imageName}`);
+  } catch {}
+
+  projectAssetsInfo[source][category].push(c);
 });
 
 export { projectAssetsInfo };
