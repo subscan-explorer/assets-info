@@ -11,5 +11,5 @@
   "devDependencies": {
     "typescript": "^5.0.4"
   },
-  "license": "Apache-2.0"
+  "license": "MIT"
 }
