@@ -176,26 +176,12 @@ const main = async () => {
     return;
   }
 
-  const githubToken = actions.getInput("githubToken", { required: true });
-  const prSha = actions.getInput("prSha", { required: true });
-  const prNum = actions.getInput("prNum", { required: true });
-
-  console.log('fileNames', actions.getInput("fileNames", { required: true }));
-  console.log('changes', changes);
-  console.log('prSha', prSha);
-  console.log('prNum', prNum);
-
-  console.log('fileNames env', process.env.INPUT_FILENAMES);
-  console.log('prSha env', process.env.INPUT_SHA);
-  console.log('prNum env', process.env.INPUT_NUM);
-
-  console.log(githubToken ? githubToken.slice(0, 3) : 'token not found');
-  console.log(process.env.APIKEY ? process.env.APIKEY.slice(0, 3) : 'api key not found');
-  console.log(process.env.INPUT_TOKEN ? process.env.INPUT_TOKEN.slice(0, 3) : ' token env not found');
+  const prSha = process.env.INPUT_SHA;
+  const prNum = process.env.INPUT_NUM ? Number(process.env.INPUT_NUM) : 0;
 
   const prContent = prNum
-    ? await getPRContentByNumber(githubToken, prNum)
-    : await getPRContentBySha(githubToken, prSha);
+    ? await getPRContentByNumber(process.env.INPUT_TOKEN, prNum)
+    : await getPRContentBySha(process.env.INPUT_TOKEN, prSha);
   console.log("pr", `#${prNum}`, prSha, prContent);
 
   if (!prContent) {
