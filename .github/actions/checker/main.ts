@@ -9,7 +9,7 @@ const fs = require("fs");
 const categories: string[] = require("../../../categories.json");
 const networks: string[] = require("../../../networks.json");
 const headers = {
-  "Content-Type": "application/json; charset=utf-8",
+  "Content-Type": "application/json",
   "X-Api-Key": process.env.INPUT_APIKEY,
 };
 
