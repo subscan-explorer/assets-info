@@ -191,10 +191,8 @@ const main = async () => {
 
   const extractedAsset = assetRegex.exec(prContent.body);
   const extractedOthers = othersRegex.exec(prContent.body);
-  console.log('extractedAsset', extractedAsset, extractedAsset?.length);
-  console.log('extractedOthers', extractedOthers, extractedOthers?.length);
 
-  if (extractedAsset?.length !== 3 || extractedOthers?.length !== 1) {
+  if (extractedAsset?.length !== 3 && extractedOthers?.length !== 1) {
     actions.setFailed("the PR content is not expected");
     return;
   }
