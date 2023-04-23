@@ -24,12 +24,6 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v35
 
-      - name: List all added files
-        run: |
-          for file in ${{ steps.changed-files.outputs.all_changed_and_modified_files }}; do
-            echo "$file was added"
-          done
-
       - name: Check signature
         uses: ./.github/actions/checker
         if: success()
@@ -38,7 +32,7 @@ jobs:
           prSha: ${{ github.event.pull_request.head.sha }}
           prNum: ${{ github.event.pull_request.number }}
           githubToken: ${{ secrets.GITHUB_TOKEN }}
-          fileNames: ${{ steps.changed-files.outputs.all_changed_files }}
+          fileNames: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
           subscanApiKey: ${{ secrets.SUBSCAN_APIKEY }}
       - uses: actions-ecosystem/action-remove-labels@v1
         if: always()
