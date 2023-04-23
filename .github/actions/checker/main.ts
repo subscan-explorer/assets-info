@@ -133,7 +133,7 @@ const isValidSystemCustom = async (symbol, category, network, file) => {
 };
 
 const isValidERC20ERC721 = async (id, symbol, category, network, file) => {
-  const apiUrl = `https://${network}.webapi.subscan.io/api/scan/evm/tokens`;
+  const apiUrl = `https://${network}.api.subscan.io/api/scan/evm/tokens`;
   const body = {
     contracts: [id.toString()],
   };
