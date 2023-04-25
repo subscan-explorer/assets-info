@@ -245,7 +245,7 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = !verified || (await isValidSystemCustom(tokenSymbol, category, networkIdentity, file));
+      verified = !verified || (await isValidSystemCustom(tokenId || tokenSymbol, category, networkIdentity, file));
     } else if (category === "erc20" || category === "erc721") {
       verified = !verified || (await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file));
     }
