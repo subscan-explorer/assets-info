@@ -4,6 +4,7 @@ const actions = require("@actions/core");
 const { cryptoWaitReady, decodeAddress, signatureVerify } = require("@polkadot/util-crypto");
 const { u8aToHex } = require("@polkadot/util");
 const nodeFetch = require("node-fetch");
+const path = require("path");
 const fs = require("fs");
 
 const categories: string[] = require("../../../categories.json");
@@ -218,7 +219,21 @@ const main = async () => {
       continue;
     }
     const detail = JSON.parse(body);
-    const { TokenID: tokenId, TokenSymbol: tokenSymbol, Category: category, NetworkIdentity: networkIdentity } = detail;
+    const {
+      TokenID: tokenId,
+      TokenSymbol: tokenSymbol,
+      Category: category,
+      NetworkIdentity: networkIdentity,
+      Logo: logo,
+    } = detail;
+
+    if (logo) {
+      const logoPath = path.join(__dirname, "/../../", logo);
+      if (!fs.existsSync(logoPath)) {
+        actions.setFailed(`${logoPath} does not exists`);
+        verified = false;
+      }
+    }
 
     if (!networks.includes(networkIdentity)) {
       actions.setFailed(`NetworkIdentity is invalid in ${file}`);
