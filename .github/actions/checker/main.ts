@@ -228,9 +228,17 @@ const main = async () => {
     } = detail;
 
     if (logo) {
+      const extension = logo.split('.').slice(-1)[0];
       const logoPath = path.join(__dirname, "/../../", logo);
+
       if (!fs.existsSync(logoPath)) {
         actions.setFailed(`${logoPath} does not exists`);
+        verified = false;
+      } else if (extension !== 'png' && extension !== 'svg') {
+        actions.setFailed(`Expect logo in png or svg format`);
+        verified = false;
+      } else if (fs.lstatSync(logoPath).size / 1024 > 30) {
+        actions.setFailed(`The logo file should not be larger than 30KB`);
         verified = false;
       }
     }
