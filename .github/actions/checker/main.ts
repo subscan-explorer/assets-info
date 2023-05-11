@@ -221,19 +221,11 @@ const main = async () => {
     const detail = JSON.parse(body);
     const {
       TokenID: tokenId,
-      TokenSymbol: tokenSymbol,
       Category: category,
       NetworkIdentity: networkIdentity,
       Logo: logo,
     } = detail;
-
-    if (logo) {
-      const logoPath = path.join(__dirname, "/../../", logo);
-      if (!fs.existsSync(logoPath)) {
-        actions.setFailed(`${logoPath} does not exists`);
-        verified = false;
-      }
-    }
+    let tokenSymbol = detail.TokenSymbol;
 
     if (!networks.includes(networkIdentity)) {
       actions.setFailed(`NetworkIdentity is invalid in ${file}`);
@@ -242,6 +234,30 @@ const main = async () => {
     if (!categories.includes(category)) {
       actions.setFailed(`Category is invalid in ${file}`);
       verified = false;
+    }
+
+    if (logo) {
+      const extension = logo.split('.').slice(-1)[0];
+      const logoPath = path.join(__dirname, "/../../", logo);
+      const logoFileName = logo.split('/').slice(-1)[0].split('.')[0].split('_');
+
+      if (!fs.existsSync(logoPath)) {
+        actions.setFailed(`${logoPath} does not exists`);
+        verified = false;
+      } else if (extension !== 'png' && extension !== 'svg') {
+        actions.setFailed(`Expect logo in png or svg format`);
+        verified = false;
+      } else if (fs.lstatSync(logoPath).size / 1024 > 30) {
+        actions.setFailed(`The logo file should not be larger than 30KB`);
+        verified = false;
+      } else if (logoFileName.length !== 3 || logoFileName[0] !== networkIdentity || logoFileName[1] !== category || (tokenSymbol && logoFileName[2] !== tokenSymbol)) {
+        actions.setFailed(`Please name the logo file according to the network_category_symbol.<png/svg> format`);
+        verified = false;
+      }
+
+      if (!tokenSymbol && logoFileName.length === 3) {
+        tokenSymbol = logoFileName[2];
+      }
     }
 
     if (category === "asset") {
