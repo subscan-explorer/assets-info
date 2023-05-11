@@ -6,10 +6,16 @@ This repo is convenient for assets owner to update some off-chain information su
 
 1. Fork this repository
 2. If there is no asset you want to update in the description file in the `./assets` directory, then create a new file first like `./assets/<any name>.json`, and the file format refers to [template.json](./assets/template.json) and [Description file](#description-file). Then update the information you need to update in the description file
-3. If you need to update the logo, put your logo to `./logos/<file name>.<svg/png>`
+3. If you need to update the logo, put your logo to `./logos/<network_category_symbol>.<svg/png>`
 4. Finally, make a pull request to our repo, and replace placeholders of `Asset Owner & Signature Account`, `Signature Hash` or `Your Identity`
 5. Done, now you can create and wait for the PR Checker to pass your request, and our team will double-check and confirm your request
 6. After pr is merged, we will release new version (usually in one or two days), and asset info will be updated on Subscan.
+
+> Some naming conventions about logo file
+> - File Extension: `png`/`svg` (Uppercase PNG/SVG is considered invalid)
+> - File Name: `network_category_symbol.<png/svg>` (e.g.rockmine_asset_ABC.png)
+> - Size: Less than `30KB`
+> - Background: Preferably transparent
 
 ## About the signature
 

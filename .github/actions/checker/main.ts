@@ -251,7 +251,7 @@ const main = async () => {
         actions.setFailed(`The logo file should not be larger than 30KB`);
         verified = false;
       } else if (logoFileName.length !== 3 || logoFileName[0] !== networkIdentity || logoFileName[1] !== category || (tokenSymbol && logoFileName[2] !== tokenSymbol)) {
-        actions.setFailed(`Please name the logo file according to the network_type_symbol.<png/svg> format`);
+        actions.setFailed(`Please name the logo file according to the network_category_symbol.<png/svg> format`);
         verified = false;
       }
 
