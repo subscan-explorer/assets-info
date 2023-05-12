@@ -11,9 +11,10 @@ This repo is convenient for assets owner to update some off-chain information su
 5. Done, now you can create and wait for the PR Checker to pass your request, and our team will double-check and confirm your request
 6. After pr is merged, we will release new version (usually in one or two days), and asset info will be updated on Subscan.
 
-> Some naming conventions about logo file
+> Some naming conventions about logo file:
+>
 > - File Extension: `png`/`svg` (Uppercase PNG/SVG is considered invalid)
-> - File Name: `network_category_symbol.<png/svg>` (e.g.rockmine_asset_ABC.png)
+> - File Name: `network_category_symbol.<png/svg>` (e.g. `Acala Mandala_asset_ABC.png`)
 > - Size: Less than `30KB`
 > - Background: Preferably transparent
 
@@ -45,100 +46,98 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 - `Medium Link`: medium link
 - `Github Link`: github link
 - `Category`: one of [Asset categories](#asset-categories)
-- `NetworkIdentity`: refers to [Network Identity](#network-identity)
+- `Network`: refers to [Network Identity](#networks)
 
-## Network Identity
+## Networks
 
-| Name (displayed in the [Subscan](https://www.subscan.io/network_list)) | NetworkIdentity       |
-| ---------------------------------------------------------------------- | --------------------- |
-| Acala                                                                  | acala                 |
-| Acala Mandala                                                          | acala-testnet         |
-| Aleph Zero                                                             | alephzero             |
-| Altair                                                                 | altair                |
-| Astar                                                                  | astar                 |
-| Bajun                                                                  | bajun                 |
-| Basilisk                                                               | basilisk              |
-| Bifrost                                                                | bifrost               |
-| Bifrost Kusama                                                         | bifrost-kusama        |
-| Bifrost Testnet                                                        | bifrost-testnet       |
-| Calamari                                                               | calamari              |
-| Centrifuge                                                             | centrifuge-parachain  |
-| Centrifuge Legacy                                                      | centrifuge            |
-| ChainX                                                                 | chainx                |
-| Clover                                                                 | clover                |
-| Clover Parachain                                                       | clv                   |
-| Clover Testnet                                                         | clover-testnet        |
-| Composable                                                             | composable            |
-| Crab2                                                                  | crab-parachain        |
-| Crust                                                                  | crust                 |
-| Crust Maxwell                                                          | maxwell               |
-| Crust Parachain                                                        | crust-parachain       |
-| Crust Shadow                                                           | shadow                |
-| DALI                                                                   | dali                  |
-| Darwinia                                                               | darwinia              |
-| Darwinia Crab                                                          | crab                  |
-| Darwinia2                                                              | darwinia-parachain    |
-| Datahighway Tanganika                                                  | datahighway-tanganika |
-| DeepBrain Chain                                                        | dbc                   |
-| Dock                                                                   | dock                  |
-| Dock PoA                                                               | dock-poa              |
-| Dolphin                                                                | dolphin               |
-| Edgeware                                                               | edgeware              |
-| Efinity                                                                | efinity               |
-| Encointer                                                              | encointer             |
-| Equilibrium                                                            | equilibrium           |
-| Genshiro                                                               | genshiro              |
-| Humanode                                                               | humanode              |
-| HydraDX                                                                | hydradx               |
-| ICE Arctic                                                             | arctic                |
-| IntegriTEE                                                             | integritee            |
-| Interlay                                                               | interlay              |
-| KILT Peregrine                                                         | kilt                  |
-| KILT Spiritnet                                                         | kilt-spiritnet        |
-| Karura                                                                 | karura                |
-| Karura-rococo                                                          | karura-rococo         |
-| Khala                                                                  | khala                 |
-| Kintsugi                                                               | kintsugi              |
-| Kulupu                                                                 | kulupu                |
-| Kusama                                                                 | kusama                |
-| Mangata                                                                | mangatax              |
-| Mangata Testnet                                                        | mangata-testnet       |
-| Moonbase                                                               | moonbase              |
-| Moonbeam                                                               | moonbeam              |
-| Moonriver                                                              | moonriver             |
-| Nodle                                                                  | nodle                 |
-| OriginTrail Parachain                                                  | origintrail-parachain |
-| OriginTrail Testnet                                                    | origintrail-testnet   |
-| Pangolin                                                               | pangolin              |
-| Pangolin Parachain                                                     | pangolin-parachain    |
-| Pangoro2                                                               | pangoro               |
-| Parallel                                                               | parallel              |
-| Parallel Heiko                                                         | heiko                 |
-| Phala                                                                  | phala                 |
-| Picasso                                                                | picasso               |
-| Pioneer                                                                | pioneer               |
-| Polkadex                                                               | polkadex              |
-| Polkadot                                                               | polkadot              |
-| Polymesh                                                               | polymesh              |
-| Polymesh Testnet                                                       | polymesh-testnet      |
-| Quartz                                                                 | quartz                |
-| Reef                                                                   | reef                  |
-| Robonomics                                                             | robonomics            |
-| Rockmine                                                               | rockmine              |
-| Rococo V1                                                              | rococo                |
-| SNOW                                                                   | snow                  |
-| SORA                                                                   | sora                  |
-| Sakura                                                                 | sakura                |
-| Shibuya                                                                | shibuya               |
-| Shiden                                                                 | shiden                |
-| Stafi                                                                  | stafi                 |
-| Statemine                                                              | statemine             |
-| Statemint                                                              | statemint             |
-| Subspace Gemini 3D                                                     | subspace              |
-| Turing                                                                 | turing                |
-| Unique                                                                 | unique                |
-| Westend                                                                | westend               |
-| Zeitgeist                                                              | zeitgeist             |
+- `Acala`
+- `Acala Mandala`
+- `Aleph Zero`
+- `Altair`
+- `Astar`
+- `Bajun`
+- `Basilisk`
+- `Bifrost`
+- `Bifrost Kusama`
+- `Bifrost Testnet`
+- `Calamari`
+- `Centrifuge`
+- `Centrifuge Legacy`
+- `ChainX`
+- `Clover`
+- `Clover Parachain`
+- `Clover Testnet`
+- `Composable`
+- `Crab2`
+- `Crust`
+- `Crust Maxwell`
+- `Crust Parachain`
+- `Crust Shadow`
+- `DALI`
+- `Darwinia`
+- `Darwinia Crab`
+- `Darwinia2`
+- `Datahighway Tanganika`
+- `DeepBrain Chain`
+- `Dock`
+- `Dock PoA`
+- `Dolphin`
+- `Edgeware`
+- `Efinity`
+- `Encointer`
+- `Equilibrium`
+- `Genshiro`
+- `Humanode`
+- `HydraDX`
+- `ICE Arctic`
+- `IntegriTEE`
+- `Interlay`
+- `KILT Peregrine`
+- `KILT Spiritnet`
+- `Karura`
+- `Karura-rococo`
+- `Khala`
+- `Kintsugi`
+- `Kulupu`
+- `Kusama`
+- `Mangata`
+- `Mangata Testnet`
+- `Moonbase`
+- `Moonbeam`
+- `Moonriver`
+- `Nodle`
+- `OriginTrail Parachain`
+- `OriginTrail Testnet`
+- `Pangolin`
+- `Pangolin Parachain`
+- `Pangoro2`
+- `Parallel`
+- `Parallel Heiko`
+- `Phala`
+- `Picasso`
+- `Pioneer`
+- `Polkadex`
+- `Polkadot`
+- `Polymesh`
+- `Polymesh Testnet`
+- `Quartz`
+- `Reef`
+- `Robonomics`
+- `Rockmine`
+- `Rococo V1`
+- `SNOW`
+- `SORA`
+- `Sakura`
+- `Shibuya`
+- `Shiden`
+- `Stafi`
+- `Statemine`
+- `Statemint`
+- `Subspace Gemini 3D`
+- `Turing`
+- `Unique`
+- `Westend`
+- `Zeitgeist`
 
 ## Why the Signature Checker report **Not-Verified**
 

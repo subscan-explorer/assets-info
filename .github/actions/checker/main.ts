@@ -222,13 +222,13 @@ const main = async () => {
     const {
       TokenID: tokenId,
       Category: category,
-      NetworkIdentity: networkIdentity,
+      Network: Network,
       Logo: logo,
     } = detail;
     let tokenSymbol = detail.TokenSymbol;
 
-    if (!networks.includes(networkIdentity)) {
-      actions.setFailed(`NetworkIdentity is invalid in ${file}`);
+    if (!networks.includes(Network)) {
+      actions.setFailed(`Network is invalid in ${file}`);
       verified = false;
     }
     if (!categories.includes(category)) {
@@ -250,7 +250,7 @@ const main = async () => {
       } else if (fs.lstatSync(logoPath).size / 1024 > 30) {
         actions.setFailed(`The logo file should not be larger than 30KB`);
         verified = false;
-      } else if (logoFileName.length !== 3 || logoFileName[0] !== networkIdentity || logoFileName[1] !== category || (tokenSymbol && logoFileName[2] !== tokenSymbol)) {
+      } else if (logoFileName.length !== 3 || logoFileName[0] !== Network || logoFileName[1] !== category || (tokenSymbol && logoFileName[2] !== tokenSymbol)) {
         actions.setFailed(`Please name the logo file according to the network_category_symbol.<png/svg> format`);
         verified = false;
       }
@@ -267,7 +267,7 @@ const main = async () => {
         continue;
       }
 
-      verified = !verified || (await isValidAsset(tokenId, tokenSymbol, networkIdentity, owner, file));
+      verified = !verified || (await isValidAsset(tokenId, tokenSymbol, Network, owner, file));
 
       const secondBody = body.replace(/\n/g, " ");
       const thirdBody = secondBody.trim();
@@ -276,9 +276,9 @@ const main = async () => {
         verified = false;
       }
     } else if (category === "system" || category === "custom") {
-      verified = !verified || (await isValidSystemCustom(tokenId || tokenSymbol, category, networkIdentity, file));
+      verified = !verified || (await isValidSystemCustom(tokenId || tokenSymbol, category, Network, file));
     } else if (category === "erc20" || category === "erc721") {
-      verified = !verified || (await isValidERC20ERC721(tokenId, tokenSymbol, category, networkIdentity, file));
+      verified = !verified || (await isValidERC20ERC721(tokenId, tokenSymbol, category, Network, file));
     }
 
     if (!verified) {

@@ -4,20 +4,19 @@ const projectAssetsInfo = {};
 
 assetsContext.keys().forEach((k) => {
   const c = assetsContext(k);
-  if (!networks.includes(c.NetworkIdentity)) {
+  if (!networks.includes(c.Network)) {
     return;
   }
 
-  const source = c.NetworkIdentity;
+  const source = c.Network;
   const category = c.Category;
 
   projectAssetsInfo[source] = projectAssetsInfo[source] || {};
   projectAssetsInfo[source][category] = projectAssetsInfo[source][category] || [];
 
   try {
-    const logoPaths = c.Logo.split("/");
-    const imageName = logoPaths[logoPaths.length - 1];
-    c.Logo = require(`./logos/${imageName}`);
+    const fileName = c.Logo.split("/").slice(-1)[0];
+    c.Logo = require(`./logos/${fileName}`);
   } catch {}
 
   projectAssetsInfo[source][category].push(c);
