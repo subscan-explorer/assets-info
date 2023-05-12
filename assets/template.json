@@ -11,5 +11,5 @@
   "Medium Link": "<LEAVE HERE A LINK OR EMPTY>",
   "Github Link": "<LEAVE HERE A LINK OR EMPTY>",
   "Category": "<asset|system|custom|erc20|erc721>",
-  "NetworkIdentity": "<REQUIRED>"
+  "Network": "<REQUIRED>"
 }
