@@ -1,7 +1,7 @@
 {
   "TokenID": "999",
   "TokenSymbol": "YAKIO",
-  "Logo": "../logos/Rockmine_asset_YAKIO.png",
+  "Logo": "../logos/rockmine_asset_YAKIO.png",
   "Description (en)": "",
   "Description (zh)": "",
   "Website Link": "",
@@ -11,5 +11,5 @@
   "Medium Link": "",
   "Github Link": "",
   "Category": "asset",
-  "Network": "Rockmine"
+  "Network": "rockmine"
 }
