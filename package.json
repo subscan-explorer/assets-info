@@ -1,6 +1,6 @@
 {
   "name": "@subscan/assets-info",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "This package contains assets info of projects used in Subscan",
   "main": "index.js",
   "scripts": {
