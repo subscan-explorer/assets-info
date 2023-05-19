@@ -1,0 +1,15 @@
+{
+  "TokenID": "88",
+  "TokenSymbol": "DLC",
+  "Logo": "../logos/dbc_asset_DLC.svg",
+  "Description (en)": "Web3 remote control tool + Cloud gaming platform",
+  "Description (zh)": "Web3远程控制工具+云游戏平台",
+  "Website Link": "https://www.deeplink.cloud",
+  "Twitter Link": "https://twitter.com/DeepLinkGlobal",
+  "Telegram Link": "https://t.me/deeplinkglobal",
+  "Discord Link": "https://discord.com/invite/EuTXWRmg5Z",
+  "Medium Link": "https://medium.com/@DeepLinkGlobal",
+  "Github Link": "",
+  "Category": "asset",
+  "Network": "dbc"
+}
