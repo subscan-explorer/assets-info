@@ -1,0 +1,14 @@
+{
+  "TokenID": "tDOT",
+  "TokenSymbol": "tDOT",
+  "Logo": "../logos/acala_custom_tDOT.svg",
+  "Website Link": "https://www.taigaprotocol.io/",
+  "Twitter Link": "https://twitter.com/TaigaProtocol",
+  "Discord Link": "https://discord.com/invite/XRxWsbUeN2",
+  "Medium Link": "https://medium.com/taiga-protocol",
+  "Github Link": "https://github.com/nutsfinance/",
+  "Category": "custom",
+  "Network": "acala",
+  "Description (en)": "Unified Liquidity Standard for DOT Staking and Crowdloan Derivatives",
+  "Description (zh)": "DOT质押和众贷衍生品的统一流动性标准"
+}
