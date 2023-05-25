@@ -240,20 +240,26 @@ const main = async () => {
       const extension = logo.split('.').slice(-1)[0];
       const logoPath = path.join(__dirname, "/../../", logo);
       const logoFileName = logo.split('/').slice(-1)[0].split('.')[0].split('_');
+      let logoVerified = true;
 
       if (!fs.existsSync(logoPath)) {
         actions.setFailed(`${logoPath} does not exists`);
         verified = false;
+        logoVerified = false;
       } else if (extension !== 'png' && extension !== 'svg') {
         actions.setFailed(`Expect logo in png or svg format`);
         verified = false;
+        logoVerified = false;
       } else if (fs.lstatSync(logoPath).size / 1024 > 30) {
         actions.setFailed(`The logo file should not be larger than 30KB`);
         verified = false;
+        logoVerified = false;
       } else if (logoFileName.length !== 3 || logoFileName[0] !== Network || logoFileName[1] !== category || (tokenSymbol && logoFileName[2] !== tokenSymbol)) {
         actions.setFailed(`Please name the logo file according to the network_category_symbol.<png/svg> format`);
         verified = false;
+        logoVerified = false;
       }
+      actions.setOutput("logoVerified", logoVerified ? "true" : "false");
 
       if (!tokenSymbol && logoFileName.length === 3) {
         tokenSymbol = logoFileName[2];
