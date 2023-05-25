@@ -16,6 +16,7 @@ jobs:
           labels: |
             Signature Verified
             Signature Not-Verified
+            Logo Format Error
       - uses: actions-ecosystem/action-add-labels@v1
         with:
           labels: Waiting Signature Verifier
@@ -49,6 +50,11 @@ jobs:
         if: success() && steps.signature.outputs.verified == 'true'
         with:
           labels: Signature Verified
+      - name: Label when logo format error
+        uses: actions-ecosystem/action-add-labels@v1
+        if: failure() && steps.signature.outputs.logoVerified == 'false'
+        with:
+          labels: Logo Format Error
       - name: Label remove when disapproved
         uses: actions-ecosystem/action-add-labels@v1
         if: failure() || steps.signature.outputs.verified == 'false'
