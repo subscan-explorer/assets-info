@@ -47,7 +47,7 @@ jobs:
           labels: Waiting Signature Verifier
       - name: Label when logo format error
         uses: actions-ecosystem/action-add-labels@v1
-        if: failure() || steps.signature.outputs.logoVerified == 'false'
+        if: failure() && steps.signature.outputs.logoVerified == 'false'
         with:
           labels: Logo Format Error
       - name: Label when approved
