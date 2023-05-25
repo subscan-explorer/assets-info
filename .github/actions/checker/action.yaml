@@ -20,6 +20,9 @@ outputs:
   verified:
     description: Verified Status
     value: ${{ steps.executor.outputs.verified }}
+  logoVerified:
+    description: Logo Verified Status
+    value: ${{ steps.executor.outputs.logoVerified }}
 runs:
   using: "composite"
   steps:
