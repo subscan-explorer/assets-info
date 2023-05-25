@@ -207,6 +207,7 @@ const main = async () => {
   console.log("extracted", owner, signature);
 
   let verified = true;
+  let logoVerified = true;
 
   await cryptoWaitReady();
   for (const file of changes) {
@@ -240,7 +241,6 @@ const main = async () => {
       const extension = logo.split('.').slice(-1)[0];
       const logoPath = path.join(__dirname, "/../../", logo);
       const logoFileName = logo.split('/').slice(-1)[0].split('.')[0].split('_');
-      let logoVerified = true;
 
       if (!fs.existsSync(logoPath)) {
         actions.setFailed(`${logoPath} does not exists`);
@@ -259,7 +259,6 @@ const main = async () => {
         verified = false;
         logoVerified = false;
       }
-      actions.setOutput("logoVerified", logoVerified ? "true" : "false");
 
       if (!tokenSymbol && logoFileName.length === 3) {
         tokenSymbol = logoFileName[2];
@@ -292,6 +291,7 @@ const main = async () => {
     }
   }
 
+  actions.setOutput("logoVerified", logoVerified ? "true" : "false");
   actions.setOutput("verified", verified ? "true" : "false");
 };
 
