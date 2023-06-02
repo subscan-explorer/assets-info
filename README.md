@@ -34,19 +34,19 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 > You can fill in " " for those that cannot be answered at present
 
-- `TokenID`: asset/token id or contract address
-- `TokenSymbol`: asset/token symbol
-- `Logo`: asset/token logo
-- `Description (en)`: description in English
-- `Description (zh)`: description in Chinese
-- `Website Link`: website link
-- `Twitter Link`: twitter link
-- `Telegram Link`: telegram link
-- `Discord Link`: discord link
-- `Medium Link`: medium link
-- `Github Link`: github link
-- `Category`: one of [Asset categories](#asset-categories)
-- `Network`: refers to [Network Identity](#networks)
+- `TokenID`: 7373
+- `TokenSymbol`: PEPE
+- `Logo`: ./logos/pepe_ksm.png
+- `Description (en)`: let get some chicken nuggies you filthy degens
+- `Description (zh)`: chingchong
+- `Website Link`: " "
+- `Twitter Link`: [twitter link](https://twitter.com/pepecoinksm)
+- `Telegram Link`: " "
+- `Discord Link`: " "
+- `Medium Link`: " "
+- `Github Link`: " "
+- `Category`: asset
+- `Network`: statemine
 
 ## Network Identity
 
