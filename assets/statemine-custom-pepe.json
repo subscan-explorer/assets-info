@@ -1,7 +1,7 @@
 {
   "TokenID": "7373",
   "TokenSymbol": "PEPE",
-  "Logo": "../logos/statemine_asset_pepe.png",
+  "Logo": "../logos/statemine_custom_pepe.png",
   "Description (en)": "lets get some chicken nuggies you filthy degens",
   "Description (zh)": "chingchong",
   "Website Link": "",
@@ -10,6 +10,6 @@
   "Discord Link": "",
   "Medium Link": "",
   "Github Link": "",
-  "Category": "asset",
+  "Category": "custom",
   "Network": "statemine"
 }
