@@ -32,7 +32,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 ## Description file
 
-> You can fill in " " for those that cannot be answered at present
+> You can fill in " " for those that cannot be answered at present. No insulting or disrespectful words.
 
 - `TokenID`: asset/token id or contract address
 - `TokenSymbol`: asset/token symbol
