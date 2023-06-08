@@ -32,21 +32,21 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 ## Description file
 
-> You can fill in " " for those that cannot be answered at present
+> You can fill in " " for those that cannot be answered at present. No insulting or disrespectful words.
 
-- `TokenID`: 7373
-- `TokenSymbol`: PEPE
-- `Logo`: ./logos/statemine_asset_pepe.png
-- `Description (en)`: let get some chicken nuggies frens
-- `Description (zh)`:
-- `Website Link`: " "
-- `Twitter Link`: [twitter link](https://twitter.com/pepecoinksm)
-- `Telegram Link`: " "
-- `Discord Link`: " "
-- `Medium Link`: " "
-- `Github Link`: " "
-- `Category`: asset
-- `Network`: statemine
+- `TokenID`: asset/token id or contract address
+- `TokenSymbol`: asset/token symbol
+- `Logo`: asset/token logo
+- `Description (en)`: description in English
+- `Description (zh)`: description in Chinese
+- `Website Link`: website link
+- `Twitter Link`: twitter link
+- `Telegram Link`: telegram link
+- `Discord Link`: discord link
+- `Medium Link`: medium link
+- `Github Link`: github link
+- `Category`: one of [Asset categories](#asset-categories)
+- `Network`: refers to [Network Identity](#networks)
 
 ## Network Identity
 
