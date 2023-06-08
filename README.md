@@ -38,7 +38,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 - `TokenSymbol`: PEPE
 - `Logo`: ./logos/statemine_asset_pepe.png
 - `Description (en)`: let get some chicken nuggies you filthy degens
-- `Description (zh)`: chingchong
+- `Description (zh)`:
 - `Website Link`: " "
 - `Twitter Link`: [twitter link](https://twitter.com/pepecoinksm)
 - `Telegram Link`: " "
