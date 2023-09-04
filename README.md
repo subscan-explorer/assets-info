@@ -54,8 +54,12 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 |------------------------------------------------------------------------|-----------------------|
 | Acala                                                                  | acala                 |
 | Acala Mandala                                                          | acala-testnet         |
+| agung                                                                  | agung                 |
 | Aleph Zero                                                             | alephzero             |
 | Altair                                                                 | altair                |
+| Assethub Polkadot                                                      | assethub-polkadot     |
+| Assethub Kusama                                                        | assethub-kusama       |
+| Assethub Rococo                                                        | assethub-rococo       |
 | Astar                                                                  | astar                 |
 | Bajun                                                                  | bajun                 |
 | Basilisk                                                               | basilisk              |
@@ -80,7 +84,6 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | DeepBrain Chain                                                        | dbc                   |
 | Dock                                                                   | dock                  |
 | Dolphin                                                                | dolphin               |
-| Edgeware                                                               | edgeware              |
 | Efinity                                                                | efinity               |
 | Encointer                                                              | encointer             |
 | Equilibrium                                                            | equilibrium           |
@@ -94,8 +97,10 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | Karura                                                                 | karura                |
 | Khala                                                                  | khala                 |
 | Kintsugi                                                               | kintsugi              |
+| krest                                                                  | krest                 |
 | Kusama                                                                 | kusama                |
 | Mangata                                                                | mangatax              |
+| Manta                                                                  | manta                 |
 | Moonbase                                                               | moonbase              |
 | Moonbeam                                                               | moonbeam              |
 | Moonriver                                                              | moonriver             |
@@ -109,25 +114,24 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | Picasso                                                                | picasso               |
 | Pioneer                                                                | pioneer               |
 | Polkadex                                                               | polkadex              |
+| Polkadex Parachain                                                     | polkadex-parachain    |
 | Polkadot                                                               | polkadot              |
 | Polymesh                                                               | polymesh              |
 | Polymesh Testnet                                                       | polymesh-testnet      |
 | Quartz                                                                 | quartz                |
 | Reef                                                                   | reef                  |
 | Robonomics                                                             | robonomics            |
-| Rockmine                                                               | rockmine              |
 | Rococo V1                                                              | rococo                |
 | SNOW                                                                   | snow                  |
 | SORA                                                                   | sora                  |
 | Sakura                                                                 | sakura                |
 | Shibuya                                                                | shibuya               |
 | Shiden                                                                 | shiden                |
-| Stafi                                                                  | stafi                 |
-| Statemine                                                              | statemine             |
-| Statemint                                                              | statemint             |
-| Subspace Gemini 3D                                                     | subspace              |
+| Stafi                                                                   | stafi                  |
+| Subspace Gemini 3F                                                     | subspace              |
 | Turing                                                                 | turing                |
 | Unique                                                                 | unique                |
+| Vara                                                                   | vara                  |
 | Westend                                                                | westend               |
 | Zeitgeist                                                              | zeitgeist             |
 
