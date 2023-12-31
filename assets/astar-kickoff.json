@@ -1,0 +1,15 @@
+{
+  "TokenID": "0x0ff4be4912b5e1859c40168562c158b718a00131",
+  "TokenSymbol": "0XKO",
+  "Logo": "../logos/astar_kickoff.png",
+  "Description (en)": "Play 2 Earn Soccer Game",
+  "Description (zh)": "",
+  "Website Link": "https://www.0xKickOff.com",
+  "Twitter Link": "https://twitter.com/0xKickOff",
+  "Telegram Link": "https://t.me/KickOffToken",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "erc20",
+  "Network": "astar"
+}
