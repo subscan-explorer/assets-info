@@ -105,8 +105,8 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | Moonbeam                                                               | moonbeam              |
 | Moonriver                                                              | moonriver             |
 | Nodle                                                                  | nodle                 |
-| OriginTrail Parachain                                                  | origintrail           |
-| OriginTrail Testnet                                                    | origintrail-testnet   |
+| NeuroWeb                                                               | neuroweb              |
+| NeuroWeb Testnet                                                       | neuroweb-testnet      |
 | Pangoro2                                                               | pangoro               |
 | Parallel                                                               | parallel              |
 | Parallel Heiko                                                         | parallel-heiko        |
