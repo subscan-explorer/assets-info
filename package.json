@@ -2,8 +2,9 @@
   "name": "@subscan/assets-info",
   "version": "1.0.15",
   "description": "This package contains assets info of projects used in Subscan",
-  "main": "index.js",
+  "main": "dist/main.js",
   "scripts": {
+    "build": "npx webpack",
     "pub": "npm version patch && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/subscan-explorer/assets-info/issues"
   },
-  "homepage": "https://github.com/subscan-explorer/assets-info#readme"
+  "homepage": "https://github.com/subscan-explorer/assets-info#readme",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
 }

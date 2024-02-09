@@ -21,5 +21,6 @@ assetsContext.keys().forEach((k) => {
 
   projectAssetsInfo[source][category].push(c);
 });
-
-export { projectAssetsInfo };
+module.exports = {
+  projectAssetsInfo,
+}
