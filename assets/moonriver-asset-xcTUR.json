@@ -1,0 +1,14 @@
+{
+  "TokenID": "133300872918374599700079037156071917454",
+  "TokenSymbol": "xcTUR",
+  "Logo": "../logos/moonriver_asset_xcTUR.png",
+	"Description (en)": "The native token of the Turing Network",
+  "Description (zh)": "Turing Network原生代币",
+  "Website Link": "https://oak.tech/turing/home/",
+  "Twitter Link": "https://twitter.com/oak_network",
+  "Discord Link": "https://discord.gg/7W9UDvsbwh",
+  "Medium Link": "https://medium.com/oak-blockchain",
+  "Github Link": "https://github.com/OAK-Foundation/",
+  "Category": "asset",
+  "Network": "moonriver"
+}
