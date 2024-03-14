@@ -1,0 +1,15 @@
+{
+  "TokenID": "0x0553764662e3de189ad00292bfcf2c182b75d0d1",
+  "TokenSymbol": "MBG",
+  "Logo": "../logos/humanode_erc20_MBG.png",
+  "Description (en)": "The governance and utility token that gives back to the community",
+  "Description (zh)": "",
+  "Website Link": "https://mb-guild.xyz",
+  "Twitter Link": "https://twitter.com/0xmanbun",
+  "Telegram Link": "",
+  "Discord Link": "https://discord.gg/NJzazpJ4aa",
+  "Medium Link": "",
+  "Github Link": "https://github.com/ManBun-Guild",
+  "Category": "erc20",
+  "Network": "humanode"
+}
