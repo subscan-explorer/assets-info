@@ -1,0 +1,15 @@
+{
+  "TokenID": "18",
+  "TokenSymbol": "DOTA",
+  "Logo": "../logos/statemine_asset_DOTA.png",
+  "Description (en)": "The first scalable inscription protocol and user community on Polkadot",
+  "Description (zh)": "波卡生态首个可扩展的铭文协议与玩家社区",
+  "Website Link": "https://dota.fyi",
+  "Twitter Link": "https://twitter.com/dot20_dota",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "https://github.com/orgs/DOTA-DOT20/repositories",
+  "Category": "asset",
+  "Network": "statemine"
+}
