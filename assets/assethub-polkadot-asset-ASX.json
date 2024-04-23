@@ -1,7 +1,7 @@
 {
   "TokenID": "888",
   "TokenSymbol": "ASX",
-  "Logo": "../logos/statemine_asset_ASX.png",
+  "Logo": "../logos/assethub-polkadot_asset_ASX.png",
   "Description (en)": "A DEX for the Polkadot Asset Hub",
   "Description (zh)": "Polkadot 资产中心的 DEX",
   "Website Link": "https://asset-x.io/",
@@ -11,5 +11,5 @@
   "Medium Link": "https://medium.com/@dotassetx",
   "Github Link": "https://github.com/AssetXdot",
   "Category": "asset",
-  "Network": "statemine"
+  "Network": "assethub-polkadot"
 }
