@@ -1,7 +1,7 @@
 {
   "TokenID": "888",
   "TokenSymbol": "ASX",
-  "Logo": "../logos/assethub-polkadot_asset_ASX.png",
+  "Logo": "../logos/statemine_asset_ASX.png",
   "Description (en)": "A DEX for the Polkadot Asset Hub",
   "Description (zh)": "Polkadot 资产中心的 DEX",
   "Website Link": "https://asset-x.io/",
@@ -9,7 +9,7 @@
   "Telegram Link": "https://t.me/DotAssetX",
   "Discord Link": "https://discord.gg/qaJUh7mAxH",
   "Medium Link": "https://medium.com/@dotassetx",
-  "Github Link": "https://github.com/Steak-King/AssetX",
+  "Github Link": "https://github.com/AssetXdot",
   "Category": "asset",
-  "Network": "assethub-polkadot"
+  "Network": "statemine"
 }
