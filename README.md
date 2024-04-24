@@ -54,44 +54,53 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 |------------------------------------------------------------------------|-----------------------|
 | Acala                                                                  | acala                 |
 | Acala Mandala                                                          | acala-testnet         |
-| agung                                                                  | agung                 |
+| agung                                                                  | agung-testnet         |
+| Ajuna                                                                  | ajuna                 |
 | Aleph Zero                                                             | alephzero             |
+| Aleph Zero Testnet                                                     | alephzero-testnet     |
 | Altair                                                                 | altair                |
 | Assethub Polkadot                                                      | assethub-polkadot     |
 | Assethub Kusama                                                        | assethub-kusama       |
 | Assethub Rococo                                                        | assethub-rococo       |
 | Astar                                                                  | astar                 |
+| Avail Testnet                                                          | avail-testnet         |
 | Bajun                                                                  | bajun                 |
 | Basilisk                                                               | basilisk              |
 | Bifrost                                                                | bifrost               |
 | Bifrost Kusama                                                         | bifrost-kusama        |
-| Bifrost Testnet                                                        | bifrost-testnet       |
+| Bridgehub Rococo                                                       | bridgehub-rococo      |
 | Calamari                                                               | calamari              |
+| Canary Matrix                                                          | canary-matrix         |
+| Canary                                                                 | canary                |
 | Centrifuge                                                             | centrifuge            |
 | ChainX                                                                 | chainx                |
 | Clover                                                                 | clover                |
-| Clover Parachain                                                       | clv                   |
-| Clover Testnet                                                         | clover-testnet        |
 | Composable                                                             | composable            |
-| Crab2                                                                  | crab                  |
+| Continuum                                                              | continuum             |
+| Coretime Kusama                                                        | coretime-kusama       |
+| Coretime Rococo                                                        | coretime-rococo       |
+| Coretime Westend                                                       | coretime-westend      |
+| Crab                                                                   | crab                  |
+| Creditcoin                                                             | creditcoin            |
+| Creditcoin Testnet                                                     | creditcoin-testnet    |
+| Creditcoin CC3 Testnet                                                 | creditcoin3-testnet   |
 | Crust                                                                  | crust                 |
 | Crust Maxwell                                                          | maxwell               |
 | Crust Parachain                                                        | crust-parachain       |
 | Crust Shadow                                                           | shadow                |
-| DALI                                                                   | dali                  |
-| Darwinia2                                                              | darwinia              |
-| Datahighway Tanganika                                                  | datahighway-tanganika |
+| Dancebox                                                               | dancebox              |
+| Darwinia                                                               | darwinia              |
 | DeepBrain Chain                                                        | dbc                   |
 | Dock                                                                   | dock                  |
 | Dolphin                                                                | dolphin               |
-| Efinity                                                                | efinity               |
+| Enjin Matrix                                                           | matrix                |
+| Enjin                                                                  | enjin                 |
 | Encointer                                                              | encointer             |
-| Equilibrium                                                            | equilibrium           |
-| Genshiro                                                               | genshiro              |
 | Humanode                                                               | humanode              |
 | HydraDX                                                                | hydradx               |
 | IntegriTEE                                                             | integritee            |
 | Interlay                                                               | interlay              |
+| Joystream                                                              | joystream             |
 | KILT Peregrine                                                         | kilt-testnet          |
 | KILT Spiritnet                                                         | spiritnet             |
 | Karura                                                                 | karura                |
@@ -104,14 +113,17 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | Moonbase                                                               | moonbase              |
 | Moonbeam                                                               | moonbeam              |
 | Moonriver                                                              | moonriver             |
+| NeuroWeb                                                               | neuroweb              |
+| NeuroWeb Testnet                                                       | neuroweb-testnet      |
 | Nodle                                                                  | nodle                 |
-| OriginTrail Parachain                                                  | origintrail           |
-| OriginTrail Testnet                                                    | origintrail-testnet   |
-| Pangoro2                                                               | pangoro               |
+| Opal                                                                   | opal                  |
+| Pangolin                                                               | pangolin              |
 | Parallel                                                               | parallel              |
 | Parallel Heiko                                                         | parallel-heiko        |
+| Paseo                                                                  | paseo                 |
 | Phala                                                                  | phala                 |
 | Picasso                                                                | picasso               |
+| Picasso Rococo                                                         | picasso-rococo        |
 | Pioneer                                                                | pioneer               |
 | Polkadex                                                               | polkadex              |
 | Polkadex Parachain                                                     | polkadex-parachain    |
@@ -119,14 +131,11 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 | Polymesh                                                               | polymesh              |
 | Polymesh Testnet                                                       | polymesh-testnet      |
 | Quartz                                                                 | quartz                |
-| Reef                                                                   | reef                  |
 | Robonomics                                                             | robonomics            |
 | Rococo V1                                                              | rococo                |
-| SNOW                                                                   | snow                  |
-| SORA                                                                   | sora                  |
-| Sakura                                                                 | sakura                |
 | Shibuya                                                                | shibuya               |
 | Shiden                                                                 | shiden                |
+| SORA                                                                   | sora                  |
 | Stafi                                                                   | stafi                  |
 | Subspace Gemini 3F                                                     | subspace              |
 | Turing                                                                 | turing                |
