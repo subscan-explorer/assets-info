@@ -50,6 +50,9 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 ## Network Identity
 
+Please note that the previous statemint/statemine/rockmine is now called assethub-polkadot/assethub-kusama/assethub-rococo.
+eg: rockmine-asset-YAKIO.json -> assethub-rococo-asset-YAKIO.json
+
 | Name (displayed in the [Subscan](https://www.subscan.io/network_list)) | Network               |
 |------------------------------------------------------------------------|-----------------------|
 | Acala                                                                  | acala                 |
