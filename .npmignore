@@ -1,0 +1,7 @@
+logos/*
+assets/*
+networks/*
+.github/*
+.parcel-cache/*
+categories.json
+networks.json

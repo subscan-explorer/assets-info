@@ -2,6 +2,12 @@
 
 This repo is convenient for assets owner to update some off-chain information such as website, twitter, etc. of asset displayed in [Subscan](https://darwinia.subscan.io/assets).
 
+## Changelog
+
+### 1.1.0
+
+Refactor: use gcp img instead of inline img to reduce package size
+
 ## How to update
 
 1. Fork this repository

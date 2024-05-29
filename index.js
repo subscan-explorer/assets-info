@@ -16,7 +16,7 @@ assetsContext.keys().forEach((k) => {
 
   try {
     const fileName = c.Logo.split("/").slice(-1)[0];
-    c.Logo = require(`./logos/${fileName}`);
+    c.Logo = `https://gcs.subscan.io/assets-info/logos/${fileName}`;
   } catch {}
 
   projectAssetsInfo[source][category].push(c);
