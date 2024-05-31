@@ -1,0 +1,15 @@
+{
+  "TokenID": "0x68fcCE084688FEa5AA0fe87c4a07178ea2ba7443",
+  "TokenSymbol": "AIRLYFT2024",
+  "Logo": "../logos/astar_erc721_AIRLYFT2024.png",
+  "Description (en)": "AirLyft's Soulbound Commemorative NFT to mark the beginning of 2024 and all our supporters in 2023",
+  "Description (zh)": "",
+  "Website Link": "https://airlyft.one/",
+  "Twitter Link": "https://twitter.com/airlyftone",
+  "Telegram Link": "",
+  "Discord Link": "https://discord.gg/A7AGyrZKTH",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "erc721",
+  "Network": "astar"
+}
