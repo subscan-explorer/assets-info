@@ -36,6 +36,10 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 `asset`, `system`, `custom`, `erc20`, `erc721`
 
+## Risk categories
+
+`normal`, `unsafe`, `scam`
+
 ## Description file
 
 > You can fill in " " for those that cannot be answered at present. No insulting or disrespectful words.
@@ -52,6 +56,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 - `Medium Link`: medium link
 - `Github Link`: github link
 - `Category`: one of [Asset categories](#asset-categories)
+- `Risk`: one of [Risk categories](#risk-categories)
 - `Network`: refers to [Network Identity](#networks)
 
 ## Network Identity
