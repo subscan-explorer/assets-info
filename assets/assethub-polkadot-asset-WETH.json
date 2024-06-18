@@ -1,0 +1,15 @@
+{
+  "TokenID": "f1846f14a52715c2a09df52ef8f077c52977dcfd",
+  "TokenSymbol": "WETH",
+  "Logo": "",
+  "Description (en)": "Wrapped Ether bridged by Snowbridge",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "erc20",
+  "Network": "assethub-polkadot"
+}
