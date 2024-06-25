@@ -44,8 +44,8 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 > You can fill in " " for those that cannot be answered at present. No insulting or disrespectful words.
 
-- `TokenID`: asset/token id or contract address
-- `TokenSymbol`: asset/token symbol
+- `TokenID`: asset/token id or contract address (needs to be consistent with on-chain data)
+- `TokenSymbol`: asset/token symbol (needs to be consistent with on-chain data)
 - `Logo`: asset/token logo
 - `Description (en)`: description in English
 - `Description (zh)`: description in Chinese
@@ -55,6 +55,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 - `Discord Link`: discord link
 - `Medium Link`: medium link
 - `Github Link`: github link
+- `Tag`: to indicate the usage or the feature of the token
 - `Category`: one of [Asset categories](#asset-categories)
 - `Risk`: one of [Risk categories](#risk-categories)
 - `Network`: refers to [Network Identity](#networks)
