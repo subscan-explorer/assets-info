@@ -1,0 +1,15 @@
+{
+  "TokenID": "1024",
+  "TokenSymbol": "NCTR",
+  "Logo": "../logos/assethub-polkadot_asset_NCTR.png",
+  "Description (en)": "Apillon - Blockchain simplified. Innovation amplified. Apillon streamlines blockchain development, making it easy for web2 developers to build decentralized applications without delving into the complexities of blockchains or managing multiple tokens. With nearly 150k developers and an average daily influx of 800, manage and create your dApps effortlessly using our intuitive UI/CLI or seamless REST API integration.",
+  "Description (zh)": "Apillon - 区块链简化。创新得到放大。Apillon 简化了区块链开发，使 web2 开发人员可以轻松构建去中心化应用程序，而无需深入研究区块链的复杂性或管理多个代币。拥有近 15 万名开发人员，平均每天有 800 名开发人员涌入，使用我们直观的 UI/CLI 或无缝 REST API 集成，轻松管理和创建您的 dApp.",
+  "Website Link": "https://apillon.io/",
+  "Twitter Link": "https://x.com/Apillon",
+  "Telegram Link": "https://t.me/Apillon/1",
+  "Discord Link": "https://discord.gg/sYkR7BPF",
+  "Medium Link": "https://medium.com/@apillon",
+  "Github Link": "https://github.com/Apillon",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
+}
