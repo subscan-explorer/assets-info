@@ -11,7 +11,7 @@
   "Medium Link": "",
   "Github Link": "",
   "Tag": "",
-  "Category": "<asset>",
-  "Risk": "<normal>",
-  "Network": "Polkadot"
+  "Category": "asset",
+  "Risk": "normal",
+  "Network": "assethub-polkadot"
 }
