@@ -3,15 +3,9 @@
   "TokenSymbol": "DOTZ",
   "Logo": "../logos/DOTZillaCoin.png",
   "Description (en)": "DOTZILLA is the first epic memecoin on the Polkadot network, and its mission is simple: to conquer the cryptosphere with mighty stomps and distribute tokens like candy!",
-  "Description (zh)": "",
+  "Description (zh)": "DOTZILLA 是 Polkadot 網路上第一個史詩般的 memecoin，它的使命很簡單：以強大的跺腳征服加密圈，像分糖果一樣分發代幣！",
   "Website Link": "https://dotzilla.xyz/",
   "Twitter Link": "https://x.com/DOTzillaxyz",
-  "Telegram Link": "",
-  "Discord Link": "",
-  "Medium Link": "",
-  "Github Link": "",
-  "Tag": "",
   "Category": "asset",
-  "Risk": "normal",
   "Network": "assethub-polkadot"
 }
