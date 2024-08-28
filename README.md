@@ -112,7 +112,7 @@ eg: rockmine-asset-YAKIO.json -> assethub-rococo-asset-YAKIO.json
 | Enjin                                                                  | enjin                 |
 | Encointer                                                              | encointer             |
 | Humanode                                                               | humanode              |
-| HydraDX                                                                | hydradx               |
+| Hydration                                                              | hydration             |
 | IntegriTEE                                                             | integritee            |
 | Interlay                                                               | interlay              |
 | Joystream                                                              | joystream             |
