@@ -57,6 +57,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 - `Github Link`: github link
 - `Tag`: to indicate the usage or the feature of the token
 - `Category`: one of [Asset categories](#asset-categories)
+- `Coingecko API ID`: token API ID on Coingecko
 - `Risk`: one of [Risk categories](#risk-categories)
 - `Network`: refers to [Network Identity](#networks)
 
@@ -76,6 +77,7 @@ eg: rockmine-asset-YAKIO.json -> assethub-rococo-asset-YAKIO.json
 | Altair                                                                 | altair                |
 | Assethub Polkadot                                                      | assethub-polkadot     |
 | Assethub Kusama                                                        | assethub-kusama       |
+| Assethub Paseo                                                         | assethub-paseo        |
 | Assethub Rococo                                                        | assethub-rococo       |
 | Astar                                                                  | astar                 |
 | Avail Testnet                                                          | avail-testnet         |

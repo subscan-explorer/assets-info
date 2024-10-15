@@ -12,6 +12,7 @@
   "Github Link": "<LEAVE HERE A LINK OR EMPTY>",
   "Tag": "",
   "Category": "<asset|system|custom|erc20|erc721>",
+  "Coingecko API ID": "",
   "Risk": "<normal|unsafe|scam>",
   "Network": "<REQUIRED>"
 }
