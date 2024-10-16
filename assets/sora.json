@@ -223,5 +223,20 @@
         "Github Link": "",
         "Category": "asset",
         "Network": "sora"
+    },
+    {
+        "TokenID": "006a271832f44c93bd8692584d85415f0f3dccef9748fecd129442c8edcb4361",
+        "TokenSymbol": "vXOR",
+        "Logo": "../logos/sora-vxor.svg",
+        "Description (en)": "Vested XOR",
+        "Description (zh)": "",
+        "Website Link": "",
+        "Twitter Link": "",
+        "Telegram Link": "",
+        "Discord Link": "",
+        "Medium Link": "https://medium.com/sora-xor/v-for-vxor-841d92157225",
+        "Github Link": "",
+        "Category": "asset",
+        "Network": "sora"
     }
 ]
