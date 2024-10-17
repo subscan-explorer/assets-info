@@ -1,0 +1,25 @@
+name: Upload Logos
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - logos/**
+
+jobs:
+  upload-logos:
+    name: Upload Logos
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: 'auth'
+        uses: google-github-actions/auth@v1
+        with:
+          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
+      - name: Upload Assets
+        uses: google-github-actions/upload-cloud-storage@v1
+        with:
+          path: 'logos'
+          destination: '${{ secrets.GCS_PATH }}'
+          predefinedAcl: 'publicRead'
