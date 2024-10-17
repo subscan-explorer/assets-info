@@ -2,22 +2,52 @@ name: Upload Assets
 on:
   push:
     branches: ["main"]
+    paths:
+      - assets/**
 
 jobs:
-  build-test-deploy:
-    name: Build, Test, Deploy
+  upload-assets:
+    name: Upload Assets
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: 'auth'
-        uses: google-github-actions/auth@v1
+      - name: Merge JSON
+        id: merge_json
+        uses: ./.github/actions/merge
+
+      - name: Clone Config Repo
+        if: success()
+        uses: actions/checkout@v4
         with:
-          credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
-      - name: Upload Assets
-        uses: google-github-actions/upload-cloud-storage@v1
-        with:
-          path: 'logos'
-          destination: '${{ secrets.GCS_PATH }}'
-          predefinedAcl: 'publicRead'
+          path: ./${{ secrets.CONFIG_REPO_NAME }}
+          repository: ${{ secrets.CONFIG_REPO_OWNER }}/${{ secrets.CONFIG_REPO_NAME }}
+          ref: ${{ secrets.CONFIG_BRANCH }}
+          token: ${{ secrets.CONFIG_GITHUB_TOKEN }}
+        
+      - name: Check Config Change
+        if: success()
+        id: check_config_change
+        run: |
+          SOURCE_MD5=($(md5sum "${{ steps.merge_json.outputs.json_filename }}"))
+          DEST_MD5=($(md5sum "./${{ secrets.CONFIG_REPO_NAME }}/charts/subscan-fluxcd/assets-json/assets.json"))
+          echo "${{ steps.merge_json.outputs.json_filename }}: $SOURCE_MD5"
+          echo "./${{ secrets.CONFIG_REPO_NAME }}/charts/subscan-fluxcd/assets-json/assets.json: $DEST_MD5"
+          if [ "$SOURCE_MD5" = "$DEST_MD5" ]; then
+              echo "skip_commit=true" >> $GITHUB_OUTPUT
+          else
+              echo "skip_commit=false" >> $GITHUB_OUTPUT
+          fi
+      - name: Move json to config repo
+        if: steps.check_config_change.outputs.skip_commit == 'false' && success()
+        run: |
+          mv ${{steps.merge_json.outputs.json_filename }} ./${{ secrets.CONFIG_REPO_NAME }}/charts/subscan-fluxcd/assets-json/assets.json
+      - name: Commit and push
+        if: steps.check_config_change.outputs.skip_commit == 'false' && success()
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          cd ./${{ secrets.CONFIG_REPO_NAME }}
+          git add charts/subscan-fluxcd/assets-json/assets.json
+          git commit -m 'Update assets.json' && git push

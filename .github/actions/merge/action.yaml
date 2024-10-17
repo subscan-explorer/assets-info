@@ -1,0 +1,29 @@
+name: "merge assets"
+description: "merge assets json file to one json file"
+outputs:
+  json_filename:
+    description: Absolute path to the merged JSON file
+    value: ${{ steps.merge.outputs.json_filename }}
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+    - uses: actions/cache@v3
+      id: cache-dist
+      with:
+        path: main.js
+        key: ${{ hashFiles('**/**') }}
+    - run: |
+        bash -c "env | sort"
+        echo -------------
+      shell: bash
+    - run: |
+        cd ${{ github.action_path }}
+        if [[ ! -d dist ]]; then
+          npm install -g yarn
+          yarn && yarn build
+        fi;
+      shell: bash
+    - run: node ${{ github.action_path }}/main.js
+      shell: bash
+      id: merge
