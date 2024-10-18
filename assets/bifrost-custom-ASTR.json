@@ -1,0 +1,18 @@
+
+{
+    "TokenID": "ASTR",
+    "TokenSymbol": "ASTR",
+    "Logo": "../logos/bifrost_custom_ASTR.png",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "astar",
+    "Network": "bifrost"
+  }
+  
