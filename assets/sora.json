@@ -225,7 +225,7 @@
         "Network": "sora"
     },
     {
-        "TokenID": "006a271832f44c93bd8692584d85415f0f3dccef9748fecd129442c8edcb4361",
+        "TokenID": "0x006a271832f44c93bd8692584d85415f0f3dccef9748fecd129442c8edcb4361",
         "TokenSymbol": "VXOR",
         "Logo": "../logos/sora-vxor.svg",
         "Description (en)": "Vested XOR",
