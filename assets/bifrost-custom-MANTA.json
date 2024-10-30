@@ -1,0 +1,18 @@
+
+{
+    "TokenID": "asset_registry/fab9531d59f5991a6db9beb184c1927d215687f9",
+    "TokenSymbol": "MANTA",
+    "Logo": "../logos/bifrost_custom_MANTA.png",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "manta-network",
+    "Network": "bifrost"
+  }
+  

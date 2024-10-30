@@ -1,0 +1,18 @@
+
+{
+    "TokenID": "asset_registry/f66a5cfd4ed4c4ba9d6506130b034d9bc3fe75ff",
+    "TokenSymbol": "ZLK",
+    "Logo": "../logos/bifrost-kusama_custom_ZLK.png",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "zenlink-network-token",
+    "Network": "bifrost-kusama"
+  }
+  

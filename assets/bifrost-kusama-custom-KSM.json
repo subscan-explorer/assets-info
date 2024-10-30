@@ -1,0 +1,18 @@
+
+{
+    "TokenID": "asset_registry/42143ac2073520066e25b865fbf26a7fe57b9715",
+    "TokenSymbol": "KSM",
+    "Logo": "../logos/bifrost-kusama_custom_KSM.png",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "kusama",
+    "Network": "bifrost-kusama"
+  }
+  

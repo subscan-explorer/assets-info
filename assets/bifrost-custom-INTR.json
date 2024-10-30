@@ -1,0 +1,18 @@
+
+{
+    "TokenID": "asset_registry/3da6e21cd78f9543a17ad430b5133f5da124acf7",
+    "TokenSymbol": "INTR",
+    "Logo": "../logos/bifrost_custom_INTR.png",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "interlay",
+    "Network": "bifrost"
+  }
+  
