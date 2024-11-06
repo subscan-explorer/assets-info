@@ -1,7 +1,7 @@
 {
     "TokenID": "0xe81CEe1F03Ba7A70726d983d7599e0f0f1f99a42",
     "TokenSymbol": "ASNA",
-    "Logo": "../logos/astar_asset_ASNA.png",
+    "Logo": "../logos/astar_erc20_ASNA.png",
     "Description (en)": "A meme token on the Astar EVM Chain created for learning and community engagement.",
     "Description (zh)": "",
     "Website Link": "https://astarnauts.netlify.app/",
