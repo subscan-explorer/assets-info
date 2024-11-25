@@ -1,0 +1,16 @@
+{
+    "TokenID": "standard_foreign_assets/6212dc295daf309533f0f5873ec3f3e62d9dba33",
+    "TokenSymbol": "MYTH",
+    "Logo": "",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "foreign_asset",
+    "Coingecko API ID": "mythos",
+    "Network": "assethub-polkadot"
+  }

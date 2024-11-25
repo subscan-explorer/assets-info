@@ -26,7 +26,7 @@ Refactor: use gcp img instead of inline img to reduce package size
 
 ## About the signature
 
-In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided into five categories: `asset`, `system`, `custom`, `erc20`, and `erc721`. If the asset category you update is `asset`, you need to sign your updated description file:
+In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided into five categories: `asset`, `system`, `custom`, `foreign_asset`, `erc20`, and `erc721`. If the asset category you update is `asset`, you need to sign your updated description file:
 
 1. Copy the entire description file content
 2. You can use [polkadot apps signing](https://polkadot.js.org/apps/#/signing) to sign. In the [polkadot apps signing](https://polkadot.js.org/apps/#/signing), use the owner or admin account of the asset to sign the file content
@@ -34,7 +34,7 @@ In [Subscan](https://darwinia.subscan.io/assets), assets are currently divided i
 
 ## Asset categories
 
-`asset`, `system`, `custom`, `erc20`, `erc721`
+`asset`, `system`, `custom`, `erc20`, `erc721`, `foreign_asset`
 
 ## Risk categories
 
