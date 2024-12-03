@@ -1,0 +1,15 @@
+{
+  "TokenID": "555",
+  "TokenSymbol": "GAME",
+  "Logo": "../logos/assethub-polkadot_asset_GAME.svg",
+  "Description (en)": "GameDAO",
+  "Description (zh)": "GameDAO",
+  "Website Link": "https://gamedao.co/",
+  "Twitter Link": "https://twitter.com/gamedaoco",
+  "Telegram Link": "",
+  "Discord Link": "https://discord.gg/gamedao",
+  "Medium Link": "https://blog.gamedao.co",
+  "Github Link": "https://github.com/gamedaoco",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
+}
