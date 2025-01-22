@@ -17,8 +17,10 @@ assetsContext.keys().forEach((k) => {
       projectAssetsInfo[source][category] = projectAssetsInfo[source][category] || [];
   
       try {
-        const fileName = p.Logo.split("/").slice(-1)[0];
-        p.Logo = `https://gcs.subscan.io/assets-info/logos/${fileName}`;
+        if (p.Logo) {
+          const fileName = p.Logo.split("/").slice(-1)[0];
+          p.Logo = `https://gcs.subscan.io/assets-info/logos/${fileName}`;
+        }
       } catch {}
   
       projectAssetsInfo[source][category].push(p);
@@ -32,8 +34,10 @@ assetsContext.keys().forEach((k) => {
     projectAssetsInfo[source][category] = projectAssetsInfo[source][category] || [];
   
     try {
-      const fileName = c.Logo.split("/").slice(-1)[0];
-      c.Logo = `https://gcs.subscan.io/assets-info/logos/${fileName}`;
+      if (c.Logo) {
+        const fileName = c.Logo.split("/").slice(-1)[0];
+        c.Logo = `https://gcs.subscan.io/assets-info/logos/${fileName}`;
+      }
     } catch {}
   
     projectAssetsInfo[source][category].push(c);
