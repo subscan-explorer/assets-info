@@ -1,0 +1,17 @@
+{
+    "TokenID": "constant/WETH",
+    "TokenSymbol": "WETH",
+    "Logo": "",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "custom",
+    "Coingecko API ID": "weth",
+    "Network": "bifrost"
+  }
+  
