@@ -1,0 +1,19 @@
+{
+    "TokenID": "0x33366c0959ebB47B41C6c02Eb3aD893A261Ce09E",
+    "TokenSymbol": "YOM",
+    "Logo": "../logos/peaq_erc20_YOM.png",
+    "Description (en)": "YOM is the first peer-to-peer decentralized cloud gaming network (DePIN), enabling near-zero-cost pixel streaming across gaming, architectural visualization, animation, immersive content, and the metaverse. By eliminating reliance on centralized cloud providers, YOM delivers cost-efficient, high-quality gaming instantly to any device, enhancing accessibility and scalability for developers and players alike. Powered by $YOM, the network incentivizes node operators to provide GPU resources, enabling seamless, high-fidelity experiences on any device—including mobile, MacBooks, tablets, XR headsets, and even platforms like Telegram, apps, and websites. Node operators can stake $YOM to increase their yield, while a built-in burn mechanism continuously reduces supply, making $YOM deflationary as network adoption grows.",
+    "Description (zh)": "YOM 是首个点对点去中心化云游戏网络（DePIN），实现了在游戏、建筑可视化、动画、沉浸式内容和元宇宙等领域近乎零成本的像素流式传输。通过消除对中心化云提供商的依赖，YOM 提供高效、低成本的高质量游戏体验，使开发者和玩家能够即刻在任何设备上畅玩。$YOM 作为网络的核心动力，激励节点运营商提供 GPU 资源，实现无缝、高清的游戏体验，支持移动设备、MacBooks、平板、XR 头显，甚至 Telegram、应用程序和网站等平台。节点运营商可以质押 $YOM 以提高收益，同时内置销毁机制随着网络使用增长而减少供应，使 $YOM 具有通缩特性。",
+    "Website Link": "https://www.yom.ooo/",
+    "Twitter Link": "https://x.com/YOM_Official",
+    "Telegram Link": "https://t.me/YOM_community",
+    "Discord Link": "https://discord.com/invite/yom2024",
+    "Medium Link": "https://yom-official.medium.com/",
+    "Github Link": "https://github.com/yom-ooo",
+    "Tag": ["gaming", "DePIN", "peaq", "staking", "metaverse", "networking", "compute", "cloud rendering"],
+    "Category": "erc20",
+    "Coingecko API ID": "your-open-metaverse",
+    "Risk": "normal",
+    "Network": "peaq"
+  }
+  
