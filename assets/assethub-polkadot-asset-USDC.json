@@ -1,0 +1,17 @@
+{
+    "TokenID": "1337",
+    "TokenSymbol": "USDC",
+    "Logo": "../logos/assethub-polkadot_asset_USDC.svg",
+    "Description (en)": "",
+    "Description (zh)": "",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "asset",
+    "Coingecko API ID": "tether",
+    "Network": "assethub-polkadot"
+  }
+  
