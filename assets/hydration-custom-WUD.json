@@ -1,0 +1,15 @@
+{
+  "TokenID": "WUD",
+  "TokenSymbol": "WUD",
+  "Logo": "../logos/hydration_custom_WUD.png",
+  "Description (en)": "Gavun Wud is a community-driven Polkadot memecoin inspired by Dr. Gavin Wood, co-founder of Ethereum and Polkadot. It aims to unite Web3 enthusiasts and onboard new users into the Polkadot ecosystem through engaging meme art, NFTs, AI agent and gaming experiences.",
+  "Description (zh)": "Gavun Wud是由社区驱动的Polkadot memecoin,灵感来自Dr。Ethereum和Polkadot的共同创始人Gavin Wood。它旨在通过吸引模因艺术,NFT,AI代理和游戏体验,将Web3爱好者和新用户加入Polkadot生态系统。",
+  "Website Link": "https://linktr.ee/gavunwud",
+  "Twitter Link": "https://x.com/gavunwud",
+  "Telegram Link": "https://t.me/GavunWud",
+  "Discord Link": "https://discord.gg/gYxz9k5y",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "custom",
+  "Network": "hydration"
+}
