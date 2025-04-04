@@ -1,0 +1,15 @@
+{
+    "TokenID": "50000080",
+    "TokenSymbol": "U.S.A.",
+    "Logo": "../logos/assethub-polkadot_asset_U.S.A.png",
+    "Description (en)": "U.S.A. Coin is the first meme coin proudly declared Made in the U.S.A., leveraging the innovative power of the Polkadot blockchain. Our mission is to unite the spirit of American ingenuity with cutting-edge decentralized technology, creating a unique and community-driven digital asset that celebrates freedom, creativity, and financial empowerment",
+    "Description (zh)": "U.S.A. Coin 是首个自豪地宣称“美国制造”的表情包币，充分利用了波卡（Polkadot）区块链的创新力量。我们的使命是将美国的创新精神与尖端的去中心化技术相结合，打造一个独特且以社区为驱动力的数字资产，以庆祝自由、创造力和金融赋权",
+    "Website Link": "",
+    "Twitter Link": "",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "asset",
+    "Network": "assethub-polkadot"
+  }
