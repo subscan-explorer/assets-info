@@ -1,0 +1,18 @@
+{
+  "TokenID": "17",
+  "TokenSymbol": "INTR",
+  "Logo": "../logos/hydration_custom_INTR.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "interlay",
+  "Risk": "normal",
+  "Network": "hydration"
+}

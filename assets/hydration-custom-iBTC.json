@@ -1,0 +1,18 @@
+{
+  "TokenID": "11",
+  "TokenSymbol": "iBTC",
+  "Logo": "../logos/hydration_custom_iBTC.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "interbtc",
+  "Risk": "normal",
+  "Network": "hydration"
+}

@@ -1,0 +1,18 @@
+{
+  "TokenID": "4",
+  "TokenSymbol": "WETH",
+  "Logo": "../logos/hydration_custom_WETH.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "weth",
+  "Risk": "normal",
+  "Network": "hydration"
+}

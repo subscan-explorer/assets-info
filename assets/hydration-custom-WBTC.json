@@ -1,0 +1,18 @@
+{
+  "TokenID": "3",
+  "TokenSymbol": "WBTC",
+  "Logo": "../logos/hydration_custom_WBTC.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "https://www.wbtc.network/",
+  "Twitter Link": "https://x.com/WrappedBTC",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "wrapped-bitcoin",
+  "Risk": "normal",
+  "Network": "hydration"
+}

@@ -1,0 +1,18 @@
+{
+  "TokenID": "690",
+  "TokenSymbol": "GDOT",
+  "Logo": "../logos/hydration_custom_GDOT.png",
+  "Description (en)": "GIGADOT is a composite token that allows users to hold DOT while accumulating yield from four revenue streams: vDOT (DOT LST by Bifrost), aDOT (DOT provided as collateral on Hydration Lending), LP fees, and additional liquidity incentives. The resulting yield is the highest that users can achieve by holding DOT.",
+  "Description (zh)": "GIGADOT是一种复合代币，允许用户持有DOT的同时从四个收益来源积累收益：vDOT（Bifrost提供的DOT流动性质押代币）、aDOT（在Hydration Lending上作为抵押品提供的DOT）、LP手续费以及额外的流动性激励。这产生的收益是用户通过持有DOT能够获得的最高收益。",
+  "Website Link": "https://app.hydration.net/strategies/gigadot",
+  "Twitter Link": "https://x.com/hydration_net",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "",
+  "Risk": "normal",
+  "Network": "hydration"
+}

@@ -1,0 +1,18 @@
+{
+  "TokenID": "9",
+  "TokenSymbol": "ASTR",
+  "Logo": "../logos/hydration_custom_ASTR.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "astar",
+  "Risk": "normal",
+  "Network": "hydration"
+}

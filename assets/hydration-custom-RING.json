@@ -1,0 +1,18 @@
+{
+  "TokenID": "31",
+  "TokenSymbol": "RING",
+  "Logo": "../logos/hydration_custom_RING.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "darwinia-network-native-token",
+  "Risk": "normal",
+  "Network": "hydration"
+}

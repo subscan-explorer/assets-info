@@ -1,0 +1,18 @@
+{
+  "TokenID": "33",
+  "TokenSymbol": "vASTR",
+  "Logo": "../logos/hydration_custom_vASTR.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "bifrost-voucher-astr",
+  "Risk": "normal",
+  "Network": "hydration"
+}

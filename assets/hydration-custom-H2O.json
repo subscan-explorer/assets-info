@@ -1,0 +1,18 @@
+{
+  "TokenID": "1",
+  "TokenSymbol": "H2O",
+  "Logo": "../logos/hydration_custom_H2O.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "https://app.hydration.net/",
+  "Twitter Link": "https://x.com/hydration_net",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "",
+  "Risk": "normal",
+  "Network": "hydration"
+}

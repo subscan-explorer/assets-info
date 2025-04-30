@@ -1,0 +1,18 @@
+{
+  "TokenID": "32",
+  "TokenSymbol": "AJUN",
+  "Logo": "../logos/hydration_custom_AJUN.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "ajuna-network-2",
+  "Risk": "normal",
+  "Network": "hydration"
+}

@@ -1,0 +1,18 @@
+{
+  "TokenID": "34",
+  "TokenSymbol": "ETH",
+  "Logo": "../logos/hydration_custom_ETH.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "ethereum",
+  "Risk": "normal",
+  "Network": "hydration"
+}

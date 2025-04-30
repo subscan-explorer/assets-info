@@ -1,0 +1,18 @@
+{
+  "TokenID": "12",
+  "TokenSymbol": "ZTG",
+  "Logo": "../logos/hydration_custom_ZTG.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "zeitgeist",
+  "Risk": "normal",
+  "Network": "hydration"
+}

@@ -1,0 +1,18 @@
+{
+  "TokenID": "14",
+  "TokenSymbol": "BNC",
+  "Logo": "../logos/hydration_custom_BNC.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "bifrost-native-coin",
+  "Risk": "normal",
+  "Network": "hydration"
+}

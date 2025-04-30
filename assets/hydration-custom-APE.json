@@ -1,0 +1,18 @@
+{
+  "TokenID": "6",
+  "TokenSymbol": "APE",
+  "Logo": "../logos/hydration_custom_APE.png",
+  "Description (en)": "",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Tag": "",
+  "Category": "custom",
+  "Coingecko API ID": "apecoin",
+  "Risk": "normal",
+  "Network": "hydration"
+}
