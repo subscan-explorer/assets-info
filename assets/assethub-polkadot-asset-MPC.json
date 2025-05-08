@@ -1,0 +1,16 @@
+{
+    "TokenID": "50000103",
+    "TokenSymbol": "MPC",
+    "Logo": "../logos/assethub-polkadot_asset_MPC.png",
+    "Description (en)": "My Paqman Coin",
+    "Website Link": "https://www.mpcoin.org/",
+    "Twitter Link": "https://x.com/mpcoin_org",
+    "Telegram Link": "https://t.me/MPCoinCommunity",
+    "Discord Link": "https://discord.gg/rDGC2sActC",
+    "Medium Link": "",
+    "Github Link": "",
+    "Category": "asset",
+    "Coingecko API ID": "my-paqman-coin",
+    "Network": "assethub-polkadot"
+  }
+  
