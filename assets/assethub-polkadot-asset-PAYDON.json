@@ -1,16 +1,15 @@
 {
-    "TokenID": "50000111",
-    "TokenSymbol": "DON",
-    "Logo": "../logos/assethub-polkadot_asset_DON.png",
-    "Description (en)": "Paydon",
-    "Website Link": "https://paydon.io/",
-    "Twitter Link": " https://x.com/DONCoin_cash",
-    "Telegram Link": "https://t.me/paydon_io",
-    "Discord Link": "https://discord.gg/jW5q9GMsGp",
-    "Medium Link": "",
-    "Github Link": "",
-    "Category": "asset",
-    "Coingecko API ID": "paydon",
-    "Network": "assethub-polkadot"
-  }
-  
+  "TokenID": "50000111",
+  "TokenSymbol": "DON",
+  "Logo": "../logos/assethub-polkadot_asset_DON.png",
+  "Description (en)": "Paydon",
+  "Website Link": "https://paydon.io/",
+  "Twitter Link": " https://x.com/DONCoin_cash",
+  "Telegram Link": "https://t.me/paydon_io",
+  "Discord Link": "https://discord.gg/jW5q9GMsGp",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "asset",
+  "Coingecko API ID": "paydon",
+  "Network": "assethub-polkadot"
+}
