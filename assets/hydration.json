@@ -164,7 +164,7 @@
   "TokenID": "10",
   "TokenSymbol": "USDT",
   "Logo": "../logos/hydration_custom_USDT.png",
-  "Description (en)": "USDT stablecoin bridged from Ethereum through Wormhole via Moonbeam",
+  "Description (en)": "USDT stablecoin native to Polkadot",
   "Description (zh)": "",
   "Website Link": "",
   "Twitter Link": "",
