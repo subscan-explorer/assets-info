@@ -1,7 +1,7 @@
 {
     "TokenID": "50000002",
     "TokenSymbol": "dUSD",
-    "Logo": "../logos/assethub-kusama_asset_dUSD.png",
+    "Logo": "../logos/assethub-kusama_asset_dUSD.svg",
     "Description (en)": "decent",
     "Description (zh)": "体面的",
     "Website Link": "https://brale.xyz/stablecoins/dUSD",
