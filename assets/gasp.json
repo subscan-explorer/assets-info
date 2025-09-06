@@ -1,0 +1,50 @@
+[
+    {
+        "TokenID": "asset_registry/1",
+        "TokenSymbol": "ETH",
+        "Logo": "../logos/gasp-ETH.png",
+        "Description (en)": "",
+        "Description (zh)": "",
+        "Website Link": "",
+        "Twitter Link": "",
+        "Telegram Link": "",
+        "Discord Link": "",
+        "Medium Link": "",
+        "Github Link": "",
+        "Category": "custom",
+        "Coingecko API ID": "",
+        "Network": "gasp"
+    },
+    {
+        "TokenID": "asset_registry/4",
+        "TokenSymbol": "ETH",
+        "Logo": "../logos/gasp-ETH-ARB.png",
+        "Description (en)": "",
+        "Description (zh)": "",
+        "Website Link": "",
+        "Twitter Link": "",
+        "Telegram Link": "",
+        "Discord Link": "",
+        "Medium Link": "",
+        "Github Link": "",
+        "Category": "custom",
+        "Coingecko API ID": "",
+        "Network": "gasp"
+    },
+    {
+        "TokenID": "asset_registry/5",
+        "TokenSymbol": "ETH",
+        "Logo": "../logos/gasp-ETH-BASE.png",
+        "Description (en)": "",
+        "Description (zh)": "",
+        "Website Link": "",
+        "Twitter Link": "",
+        "Telegram Link": "",
+        "Discord Link": "",
+        "Medium Link": "",
+        "Github Link": "",
+        "Category": "custom",
+        "Coingecko API ID": "",
+        "Network": "gasp"
+    }
+]

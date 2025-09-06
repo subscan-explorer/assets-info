@@ -1,0 +1,19 @@
+{
+    "TokenID": "0x940A319B75861014A220D9c6c144d108552B089B",
+    "TokenSymbol": "DEUS",
+    "Logo": "../logos/peaq_erc20_DEUS.png",
+    "Description (en)": "DEUS is the native utility and governance token of the XMAQUINA ecosystem, offering holders early exposure to Physical AI. It provides access to a diversified treasury of private robotics companies, tokenized machine assets, and the rise of humanoids. Staking DEUS unlocks voting rights over ecosystem initiatives and treasury allocations. As the machine economy expands, value generated across the portfolio and ecosystem accrues to the DAO treasury and is collectively governed to create sustainable, long-term value for builders, contributors, and token holders.",
+    "Description (zh)": "DEUS 是 XMAQUINA 生态系统的原生实用和治理代币，为持有者提供早期接触物理 AI 的机会。它提供对多样化私人机器人公司、代币化机器资产和人类化身的多元化储备的访问。质押 DEUS 解锁对生态系统倡议和储备分配的投票权。随着机器经济的发展，整个投资组合和生态系统产生的价值将积累到 DAO 储备中，并由集体治理以创造可持续的长期价值，为建设者、贡献者和代币持有者创造价值。",
+    "Website Link": "https://www.xmaquina.io/",
+    "Twitter Link": "https://x.com/xmaquinaDAO",
+    "Telegram Link": "",
+    "Discord Link": "https://discord.gg/xmaquina",
+    "Medium Link": "https://www.xmaquina.io/blog",
+    "Github Link": "https://github.com/XMAQUINA-DAO",
+    "Tag": "DePAI, DAO, Robotics, Physical AI",
+    "Category": "erc20",
+    "Coingecko API ID": "",
+    "Risk": "normal",
+    "Network": "peaq"
+  }
+  

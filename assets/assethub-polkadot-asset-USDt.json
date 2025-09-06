@@ -1,7 +1,7 @@
 {
-    "TokenID": "standard_foreign_assets/6212dc295daf309533f0f5873ec3f3e62d9dba33",
-    "TokenSymbol": "MYTH",
-    "Logo": "../logos/assethub-polkadot_asset_MYTH.png",
+    "TokenID": "1984",
+    "TokenSymbol": "USDt",
+    "Logo": "../logos/assethub-polkadot_asset_USDt.png",
     "Description (en)": "",
     "Description (zh)": "",
     "Website Link": "",
@@ -10,7 +10,8 @@
     "Discord Link": "",
     "Medium Link": "",
     "Github Link": "",
-    "Category": "foreign_asset",
-    "Coingecko API ID": "mythos",
+    "Category": "asset",
+    "Coingecko API ID": "tether",
     "Network": "assethub-polkadot"
   }
+  
