@@ -1,0 +1,15 @@
+{
+  "TokenID": "2106",
+  "TokenSymbol": "STREAK",
+  "Logo": "../logos/assethub-polkadot_asset_STREAK.svg",
+  "Description (en)": "Substreak (STREAK) is a native token on Polkadot AssetHub associated with substreak.io, an experimental multi-chain platform exploring cross-network interactions between Polkadot, Enjin, and other blockchain ecosystems.",
+  "Description (zh)": "",
+  "Website Link": "https://substreak.io",
+  "Twitter Link": "https://twitter.com/substreak",
+  "Telegram Link": "https://t.me/substreak_bot",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "https://github.com/substreak",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
+}
