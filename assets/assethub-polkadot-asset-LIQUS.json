@@ -1,15 +1,15 @@
 {
-    "TokenID": "50000393",
-    "TokenSymbol": "LIQUS",
-    "Logo": "../logos/assethub-polkadot_asset_LIQUS.png",
-    "Description (en)": "LIQUS is the utility token of the Liqusenj ecosystem on Polkadot AssetHub. Used for platform fees, discounts, gamified upgrades and integrations with Enjin blockchain.",
-    "Description (zh)": "",
-    "Website Link": "https://liqusenj.io",
-    "Twitter Link": "https://x.com/liqusenjio",
-    "Telegram Link": "https://t.me/liqusenjio",
-    "Discord Link": "",
-    "Medium Link": "",
-    "Github Link": "",
-    "Category": "asset",
-    "Network": "assethub-polkadot"
+  "TokenID": "50000393",
+  "TokenSymbol": "LIQUS",
+  "Logo": "../logos/assethub-polkadot_asset_LIQUS.png",
+  "Description (en)": "LIQUS is the utility token of the Liqusenj ecosystem on Polkadot AssetHub. Used for platform fees, discounts, gamified upgrades and integrations with Enjin blockchain.",
+  "Description (zh)": "",
+  "Website Link": "https://liqusenj.io",
+  "Twitter Link": "https://x.com/liqusenjio",
+  "Telegram Link": "https://t.me/liqusenjio",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
 }
