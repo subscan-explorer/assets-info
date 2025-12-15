@@ -1,13 +1,22 @@
-node_modules/
+# macOS
 .DS_Store
-dist/
-lib/
-.vscode/
-.idea/
-*.min.js
-logs/
-*.log
+**/.DS_Store
+
+# Node
+node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
+
+# Build outputs
+dist/
+lib/
+
+# Editors/IDE
+.vscode/
+.idea/
+
+# Misc
+*.min.js
 main.js
