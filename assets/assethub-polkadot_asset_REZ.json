@@ -1,17 +1,19 @@
 {
   "TokenID": "50000395",
   "TokenSymbol": "REZ",
-  "Logo": "assethub-polkadot_asset_REZ.png",
+  "Logo": "../logos/assethub-polkadot_asset_REZ.png",
   "Description (en)": "REZ is a Polkadot Asset Hub fungible asset in an observation phase. No incentive multipliers or special mechanics are active yet.",
-  "Description (zh)": " ",
-  "Website Link": " ",
-  "Twitter Link": " ",
-  "Telegram Link": " ",
-  "Discord Link": " ",
-  "Medium Link": " ",
-  "Github Link": " ",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
   "Tag": "utility",
   "Category": "asset",
+  "Coingecko API ID": "",
   "Risk": "normal",
   "Network": "assethub-polkadot"
 }
+
