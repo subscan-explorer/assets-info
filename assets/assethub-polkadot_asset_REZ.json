@@ -1,12 +1,15 @@
-{
-  "symbol": "REZ",
-  "name": "REZ",
-  "decimals": 10,
-  "icon": "assethub-polkadot_asset_REZ.png",
-  "description": "REZ is a Polkadot Asset Hub fungible asset in an observation phase. No incentive multipliers or special mechanics are active yet.",
-  "website": "",
-  "email": "",
-  "categories": ["correct-category"],
-  "network": "valid-network",
-  "signature": "0xb4cf0fa930a6f88afed7d102f27fd20881a295c76bcc88b6969f7dba87fcf35c0d649c96189849b1c68048814ff6cf7268855164b28c69830a459cce8707968b"
+{ 
+  "TokenID":"50000395",
+  "TokenSymbol":"REZ",
+  "Logo": "assethub-polkadot_asset_REZ.png",
+  "Description (en)": "REZ",
+  "Website Link": "https://resonanceprotocol.pro/",
+  "Twitter Link": "",
+  "Telegram Link":"",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Coingecko API ID": "rez",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
 }
