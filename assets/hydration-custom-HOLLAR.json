@@ -1,0 +1,16 @@
+{
+  "TokenID": "222",
+  "TokenSymbol": "HOLLAR",
+  "Logo": "../logos/hydration_custom_HOLLAR.svg",
+  "Description (en)": "Hydrated Dollar",
+  "Description (zh)": "",
+  "Website Link": "",
+  "Twitter Link": "",
+  "Telegram Link": "",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Category": "custom",
+  "Coingecko API ID": "hydrated-dollar",
+  "Network": "hydration"
+}
