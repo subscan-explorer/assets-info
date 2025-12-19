@@ -1,7 +1,7 @@
 { 
   "TokenID":"50000395",
   "TokenSymbol":"REZ",
-  "Logo": "assethub-polkadot_asset_REZ.png",
+  "Logo": "../logos/assethub-polkadot_asset_REZ.png",
   "Description (en)": "REZ",
   "Website Link": "https://resonanceprotocol.pro/",
   "Twitter Link": "",
