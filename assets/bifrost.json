@@ -96,6 +96,22 @@
         "Network": "bifrost"
     },
     {
+        "TokenID": "asset_registry/70b50329daea30722749e8ff0bab79339afb01f2",
+        "TokenSymbol": "vETH",
+        "Logo": "../logos/bifrost_custom_vETH.svg",
+        "Description (en)": "",
+        "Description (zh)": "",
+        "Website Link": "",
+        "Twitter Link": "",
+        "Telegram Link": "",
+        "Discord Link": "",
+        "Medium Link": "",
+        "Github Link": "",
+        "Category": "custom",
+        "Coingecko API ID": "",
+        "Network": "bifrost"
+    },
+    {
         "TokenID": "asset_registry/50284b2871fd41a18a80fde06f26d2f6a0c5a134",
         "TokenSymbol": "WETH",
         "Logo": "",
