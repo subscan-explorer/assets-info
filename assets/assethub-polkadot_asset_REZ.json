@@ -1,0 +1,15 @@
+{ 
+  "TokenID":"50000395",
+  "TokenSymbol":"REZ",
+  "Logo": "../logos/assethub-polkadot_asset_REZ.png",
+  "Description (en)": "REZ is a digital token protocol designed to align participant behavior with network stability through a system of adaptive incentives.",
+  "Website Link": "https://resonanceprotocol.pro/",
+  "Twitter Link": "",
+  "Telegram Link":"",
+  "Discord Link": "",
+  "Medium Link": "",
+  "Github Link": "",
+  "Coingecko API ID": "rez",
+  "Category": "asset",
+  "Network": "assethub-polkadot"
+}

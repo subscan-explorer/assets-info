@@ -50,4 +50,4 @@ jobs:
           git config --global user.email 'github-actions@github.com'
           cd ./${{ secrets.CONFIG_REPO_NAME }}
           git add charts/subscan-fluxcd/assets-json/assets.json
-          git commit -m 'Update assets.json' && git push
+          git commit -m '[Automated] Update assets.json' && git push

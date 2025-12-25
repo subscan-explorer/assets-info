@@ -1,0 +1,18 @@
+{
+    "TokenID": "0x7f6c37D043d4C56371AB72f2F7C64D29e5793CDc",
+    "TokenSymbol": "BREW",
+    "Logo": "../logos/peaq_erc20_BREW.png",
+    "Description (en)": "Building apps and end-use cases for humanoids",
+    "Description (zh)": "",
+    "Website Link": "https://www.homebrew.build/",
+    "Twitter Link": "https://x.com/homebrewrobots",
+    "Telegram Link": "",
+    "Discord Link": "https://discord.gg/homebrewrobots",
+    "Medium Link": "",
+    "Github Link": "https://github.com/homebrewroboticsclub",
+    "Tag": "DePAI, DAO, Robotics, Physical AI",
+    "Category": "erc20",
+    "Coingecko API ID": "homebrew-robotics-club",
+    "Risk": "normal",
+    "Network": "peaq"
+  }

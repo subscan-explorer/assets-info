@@ -1,0 +1,19 @@
+{
+    "TokenID": "0x08E6D50169863FD9BEb88687ce1573CF9D6D1484",
+    "TokenSymbol": "OVR",
+    "Logo": "../logos/peaq_erc20_OVR.png",
+    "Description (en)": "OVER is a leading Physical AI platform building the world's largest 3D map. Leveraging a Decentralized Physical Infrastructure Network (DePIN) framework, OVER incentivizes a global community of mappers with OVR Tokens to scan high-traffic locations using common smartphones and 360-degree cameras. With over 150,000 locations mapped and 60 million+ images, OVER possesses the most extensive 3D Map dataset globally. This proprietary data powers diverse Physical AI applications: from training cutting-edge Vision Foundation Models to enabling precise Visual Positioning Systems and fostering AI-powered Extended Reality (XR) publishing and browsing.",
+    "Description (zh)": "OVER 是领先的物理人工智能（Physical AI）平台，致力于构建全球最大的 3D 地图。通过采用去中心化物理基础设施网络（DePIN）框架，OVER 激励全球的制图者社区，使用普通智能手机和 360 度相机扫描人流密集区域，并通过 OVR 代币进行奖励。目前，OVER 已映射超过 150,000 个地点，拥有超过 6,000 万张图像，是全球最大的 3D 地图数据集。该专有数据为多种物理人工智能应用提供支持：从训练先进的视觉基础模型（Vision Foundation Models）、实现高精度视觉定位系统（Visual Positioning Systems），到推动基于人工智能的扩展现实（XR）内容发布与浏览。",
+    "Website Link": "https://www.overthereality.ai/",
+    "Twitter Link": "https://x.com/OVRtheReality",
+    "Telegram Link": "https://t.me/OVRtheReality",
+    "Discord Link": "https://discord.com/invite/overthereality",
+    "Medium Link": "https://medium.com/ovrthereality",
+    "Github Link": "https://github.com/OVR-Platform",
+    "Tag": "DePIN, DePAI, Robotics, Physical AI, Data",
+    "Category": "erc20",
+    "Coingecko API ID": "ovr",
+    "Risk": "normal",
+    "Network": "peaq"
+  }
+  
