@@ -1,5 +1,9 @@
 # assets-info
 
+> **⚠️ ARCHIVED**: This repository is no longer maintained. We are not accepting pull requests or making further updates.
+>
+> **For asset information updates, please submit an issue at: https://github.com/subscan-explorer/chain-asset/issues**
+
 This repo is convenient for assets owner to update some off-chain information such as website, twitter, etc. of asset displayed in [Subscan](https://darwinia.subscan.io/assets).
 
 ## Changelog
