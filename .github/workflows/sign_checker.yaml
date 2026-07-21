@@ -11,22 +11,40 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions-ecosystem/action-remove-labels@v1
+      - name: Reset status labels
+        uses: actions/github-script@v9
         with:
-          labels: |
-            Signature Verified
-            Signature Not-Verified
-            Logo Format Error
-      - uses: actions-ecosystem/action-add-labels@v1
+          script: |
+            const labels = ['Signature Verified', 'Signature Not-Verified', 'Logo Format Error'];
+            for (const name of labels) {
+              try {
+                await github.rest.issues.removeLabel({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.issue.number,
+                  name,
+                });
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+            }
+      - name: Add waiting label
+        uses: actions/github-script@v9
         with:
-          labels: Waiting Signature Verifier
-      - uses: actions/checkout@v3
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['Waiting Signature Verifier'],
+            });
+      - uses: actions/checkout@v6
         with:
          ref: ${{ github.event.pull_request.head.ref }}
          repository: ${{ github.event.pull_request.head.repo.full_name }}
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v45
+        uses: tj-actions/changed-files@v47
         with:
           base_sha: ${{ github.event.pull_request.base.sha }}
           sha: ${{ github.event.pull_request.head.sha }}
@@ -41,22 +59,51 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           changed_files: ${{ steps.changed-files.outputs.all_changed_and_modified_files }}
           subscan_apikey: ${{ secrets.SUBSCAN_APIKEY }}
-      - uses: actions-ecosystem/action-remove-labels@v1
+      - name: Remove waiting label
+        uses: actions/github-script@v9
         if: always()
         with:
-          labels: Waiting Signature Verifier
+          script: |
+            try {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                name: 'Waiting Signature Verifier',
+              });
+            } catch (error) {
+              if (error.status !== 404) throw error;
+            }
       - name: Label when approved
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions/github-script@v9
         if: success() && steps.signature.outputs.verified == 'true'
         with:
-          labels: Signature Verified
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['Signature Verified'],
+            });
       - name: Label when logo format error
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions/github-script@v9
         if: failure() && steps.signature.outputs.logoVerified == 'false'
         with:
-          labels: Logo Format Error
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['Logo Format Error'],
+            });
       - name: Label remove when disapproved
-        uses: actions-ecosystem/action-add-labels@v1
+        uses: actions/github-script@v9
         if: failure() || steps.signature.outputs.verified == 'false'
         with:
-          labels: Signature Not-Verified
+          script: |
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              labels: ['Signature Not-Verified'],
+            });

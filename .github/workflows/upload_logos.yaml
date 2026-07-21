@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: 'auth'
-        uses: google-github-actions/auth@v1
+        uses: google-github-actions/auth@v3
         with:
           credentials_json: '${{ secrets.GOOGLE_CREDENTIALS }}'
       - name: Upload Assets
-        uses: google-github-actions/upload-cloud-storage@v1
+        uses: google-github-actions/upload-cloud-storage@v3
         with:
           path: 'logos'
           destination: '${{ secrets.GCS_PATH }}'
