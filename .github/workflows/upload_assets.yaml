@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Merge JSON
         id: merge_json
@@ -19,7 +19,7 @@ jobs:
 
       - name: Clone Config Repo
         if: success()
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           path: ./${{ secrets.CONFIG_REPO_NAME }}
           repository: ${{ secrets.CONFIG_REPO_OWNER }}/${{ secrets.CONFIG_REPO_NAME }}
