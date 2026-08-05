@@ -1,0 +1,16 @@
+{
+    "TokenID": "50000002",
+    "TokenSymbol": "dUSD",
+    "Logo": "../logos/assethub-kusama_asset_dUSD.svg",
+    "Description (en)": "decent",
+    "Description (zh)": "体面的",
+    "Website Link": "https://brale.xyz/stablecoins/dUSD",
+    "Twitter Link": "https://x.com/brale_xyz",
+    "Telegram Link": "",
+    "Discord Link": "",
+    "Medium Link": "",
+    "Github Link": "https://github.com/Brale-xyz",
+    "Category": "asset",
+    "Coingecko API ID": "",
+    "Network": "assethub-kusama"
+  }
